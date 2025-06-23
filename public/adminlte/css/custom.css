@@ -1,0 +1,173 @@
+/* custom.css - Custom styles for SPBU Report Application */
+
+/* 
+ * TABLE STYLES 
+ * Untuk mengatur tampilan tabel data wilayah
+ */
+.table {
+    width: 100%;                  /* Lebar tabel 100% dari parent */
+    margin-bottom: 1rem;          /* Jarak bawah tabel */
+    background-color: #fff;       /* Warna latar tabel putih */
+    border-collapse: collapse;    /* Menghilangkan jarak antar cell */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Efek bayangan halus */
+}
+
+/* Style untuk header tabel */
+.table th {
+    background-color: #343a40;    /* Warna latar header tabel (dark grey) */
+    color: white;                 /* Warna teks header putih */
+    padding: 12px 15px;           /* Jarak dalam cell header */
+    text-align: left;             /* Perataan teks ke kiri */
+    font-weight: 600;             /* Ketebalan font semi-bold */
+}
+
+/* Style untuk cell data tabel */
+.table td {
+    padding: 12px 15px;           /* Jarak dalam cell data */
+    border-bottom: 1px solid #dee2e6; /* Garis bawah cell */
+    vertical-align: middle;       /* Perataan vertikal ke tengah */
+}
+
+/* Warna latar baris genap */
+.table tr:nth-child(even) {
+    background-color: #f8f9fa;    /* Warna abu-abu sangat muda */
+}
+
+/* Efek hover pada baris tabel */
+.table tr:hover {
+    background-color: #e9ecef;    /* Warna abu-abu muda saat hover */
+}
+
+/* 
+ * FORM STYLES 
+ * Untuk mengatur tampilan form tambah/edit wilayah
+ */
+.form-group {
+    margin-bottom: 1.5rem;        /* Jarak antar form group */
+}
+
+/* Style untuk label form */
+.form-group label {
+    display: block;               /* Membuat label menjadi block */
+    margin-bottom: 0.5rem;        /* Jarak bawah label */
+    font-weight: 600;             /* Ketebalan font semi-bold */
+    color: #495057;               /* Warna teks abu-abu gelap */
+}
+
+/* Style untuk input form */
+.form-control {
+    display: block;               /* Membuat input menjadi block */
+    width: 100%;                  /* Lebar input 100% */
+    padding: 0.375rem 0.75rem;    /* Jarak dalam input */
+    font-size: 1rem;              /* Ukuran font standar */
+    line-height: 1.5;             /* Tinggi baris */
+    color: #495057;               /* Warna teks abu-abu gelap */
+    background-color: #fff;       /* Warna latar putih */
+    border: 1px solid #ced4da;    /* Border abu-abu */
+    border-radius: 0.25rem;       /* Sudut melengkung */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Efek transisi halus */
+}
+
+/* Style saat input form dalam keadaan focus */
+.form-control:focus {
+    color: #495057;               /* Warna teks tetap */
+    background-color: #fff;       /* Warna latar tetap */
+    border-color: #80bdff;        /* Warna border biru saat focus */
+    outline: 0;                   /* Menghilangkan outline default */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Efek glow biru */
+}
+
+/* 
+ * BUTTON STYLES 
+ * Untuk mengatur tampilan tombol
+ */
+.btn {
+    display: inline-block;        /* Membuat button inline */
+    font-weight: 400;             /* Ketebalan font normal */
+    text-align: center;           /* Perataan teks tengah */
+    white-space: nowrap;          /* Mencegah text wrapping */
+    vertical-align: middle;       /* Perataan vertikal tengah */
+    user-select: none;            /* Mencegah text selection */
+    border: 1px solid transparent; /* Border transparan */
+    padding: 0.375rem 0.75rem;    /* Jarak dalam button */
+    font-size: 1rem;              /* Ukuran font standar */
+    line-height: 1.5;             /* Tinggi baris */
+    border-radius: 0.25rem;       /* Sudut melengkung */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Efek transisi halus */
+}
+
+/* Tombol primary (biru) */
+.btn-primary {
+    color: #fff;                  /* Warna teks putih */
+    background-color: #007bff;    /* Warna latar biru */
+    border-color: #007bff;        /* Warna border biru */
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;    /* Warna latar lebih gelap saat hover */
+    border-color: #0062cc;        /* Warna border lebih gelap saat hover */
+}
+
+/* Tombol success (hijau) */
+.btn-success {
+    color: #fff;                  /* Warna teks putih */
+    background-color: #28a745;    /* Warna latar hijau */
+    border-color: #28a745;        /* Warna border hijau */
+}
+
+.btn-success:hover {
+    background-color: #218838;    /* Warna latar lebih gelap saat hover */
+    border-color: #1e7e34;        /* Warna border lebih gelap saat hover */
+}
+
+/* Tombol warning (kuning) */
+.btn-warning {
+    color: #212529;               /* Warna teks hitam */
+    background-color: #ffc107;    /* Warna latar kuning */
+    border-color: #ffc107;        /* Warna border kuning */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;    /* Warna latar lebih gelap saat hover */
+    border-color: #d39e00;        /* Warna border lebih gelap saat hover */
+}
+
+/* Tombol danger (merah) */
+.btn-danger {
+    color: #fff;                  /* Warna teks putih */
+    background-color: #dc3545;    /* Warna latar merah */
+    border-color: #dc3545;        /* Warna border merah */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;    /* Warna latar lebih gelap saat hover */
+    border-color: #bd2130;        /* Warna border lebih gelap saat hover */
+}
+
+/* Tombol ukuran kecil */
+.btn-sm {
+    padding: 0.25rem 0.5rem;      /* Jarak dalam lebih kecil */
+    font-size: 0.875rem;          /* Ukuran font lebih kecil */
+    line-height: 1.5;             /* Tinggi baris */
+    border-radius: 0.2rem;        /* Sudut melengkung lebih kecil */
+}
+
+/* 
+ * UTILITY CLASSES 
+ * Kelas bantuan untuk spacing
+ */
+.mb-2 {
+    margin-bottom: 0.5rem !important; /* Jarak bawah 0.5rem */
+}
+
+/* 
+ * PAGE HEADER 
+ * Style untuk judul halaman
+ */
+h3 {
+    color: #ee122c;               /* Warna teks dark grey */
+    margin-bottom: 1.5rem;        /* Jarak bawah */
+    padding-bottom: 0.5rem;       /* Jarak bawah dalam */
+    border-bottom: 1px solid #0b0b0b; /* Garis bawah judul */
+}

@@ -1,0 +1,30 @@
+<?= $this->extend('layouts/main') ?>
+<?= $this->section('content') ?>
+
+<div class="container">
+  <h4>Data Jenis SPBU</h4>
+  <a href="<?= base_url('jenis-spbu/create') ?>" class="btn btn-primary mb-2">Tambah Jenis</a>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Jenis</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($jenis as $i => $j): ?>
+      <tr>
+        <td><?= $i + 1 ?></td>
+        <td><?= $j['nama_jenis'] ?></td>
+        <td>
+          <a href="<?= base_url('jenis-spbu/edit/' . $j['id']) ?>" class="btn btn-warning btn-sm">Edit</a>
+          <a href="<?= base_url('jenis-spbu/delete/' . $j['id']) ?>" onclick="return confirm('Hapus?')" class="btn btn-danger btn-sm">Hapus</a>
+        </td>
+      </tr>
+      <?php endforeach ?>
+    </tbody>
+  </table>
+</div>
+
+<?= $this->endSection() ?>
