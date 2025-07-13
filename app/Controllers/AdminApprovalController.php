@@ -1,144 +1,218 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\MeterResetRequestModel;
 use App\Models\NozzleModel;
+use App\Models\PenjualanModel;
 use App\Models\PenjualanLogModel;
+use Config\Database;
 
 class AdminApprovalController extends BaseController
 {
     protected $resetModel;
     protected $nozzleModel;
+    protected $penjualanModel;
     protected $logModel;
+    protected $db;
 
     public function __construct()
     {
-        $this->resetModel = new MeterResetRequestModel();
-        $this->nozzleModel = new NozzleModel();
-        $this->logModel = new PenjualanLogModel();
+        // Inisialisasi koneksi database
+        $this->db = Database::connect();
         
+        // Inisialisasi model dengan dependency injection
+        $this->resetModel = new MeterResetRequestModel($this->db);
+        $this->nozzleModel = new NozzleModel($this->db);
+        $this->penjualanModel = new PenjualanModel($this->db);
+        $this->logModel = new PenjualanLogModel($this->db);
+
         helper(['form', 'session']);
 
-        if (!session()->get('admin_region')) {
+        // Validasi role
+        if (session()->get('role') !== 'admin_region') {
             return redirect()->to('/unauthorized');
         }
     }
 
+    // METHOD INDEX YANG DIBUTUHKAN
     public function index()
     {
-        
-    
-        if (session()->get('role') !== 'admin_region') {
-            return redirect()->to('/unauthorized');
-        }
-    
         $data = [
             'requests' => $this->resetModel->getPendingRequests(),
-            'operatorNames' => $this->_getOperatorNames()
+            'operatorNames' => $this->getOperatorNames()
         ];
         
         return view('admin/approvals', $data);
     }
 
-    private function _getOperatorNames()
-    {
-        $operatorModel = new \App\Models\OperatorModel();
-        $operators = $operatorModel->findAll();
-
-        $operatorNames = [];
-        foreach ($operators as $operator) {
-            $operatorNames[$operator['id']] = $operator['nama_operator'];
-        }
-
-        return $operatorNames;
-    }
-
+    // METHOD APPROVE YANG SUDAH DIPERBAIKI
 public function approveReset($id)
 {
-    $db = \Config\Database::connect();
-    $db->transStart();
+    // Mulai transaksi database
+    $this->db->transStart();
 
     try {
-        $request = $this->resetModel->find($id);
+        // 1. Dapatkan data permintaan reset
+        $builder = $this->db->table('meter_reset_request');
+        $request = $builder->where('id', $id)->get()->getRowArray();
+
+        // Validasi data permintaan
         if (!$request) {
-            throw new \Exception("Permintaan reset tidak ditemukan");
+            throw new \RuntimeException("Data permintaan tidak ditemukan");
         }
 
-        // **Pisahkan logika berdasarkan reset_type**
+        // Debug: Tampilkan data request
+        log_message('debug', 'Data request dari DB: '.print_r($request, true));
+
+        // 2. Validasi reset_type
+        if (!array_key_exists('reset_type', $request)) {
+            log_message('error', 'Struktur data tidak valid: '.print_r($request, true));
+            throw new \RuntimeException("Struktur data permintaan tidak valid");
+        }
+
+        // 3. Proses approval berdasarkan jenis reset
         if ($request['reset_type'] === 'physical') {
-            // **Hanya update nozzle, tidak ubah data penjualan**
-            $this->nozzleModel->update($request['nozzle_id'], [
-                'current_meter' => $request['meter_awal_baru'],
-                'last_reset_at' => date('Y-m-d H:i:s')
-            ]);
-
-            // **Catat log reset fisik**
-            $this->logModel->insert([
-                'nozzle_id' => $request['nozzle_id'],
-                'kode_spbu' => $request['kode_spbu'],
-                'action' => 'physical_reset',
-                'old_value' => $request['meter_awal_lama'],
-                'new_value' => $request['meter_awal_baru'],
-                'notes' => $request['alasan'],
-                'created_at' => date('Y-m-d H:i:s')
-            ]);
-
-        } else if ($request['reset_type'] === 'correction') {
-            // **Handle koreksi data (boleh ubah penjualan)**
-            $this->_handleCorrection(
-                $request['penjualan_id'],
-                $request['meter_awal_baru'],
-                $request['alasan']
-            );
+            if (empty($request['nozzle_id'])) {
+                throw new \RuntimeException("Nozzle ID diperlukan untuk reset fisik");
+            }
+            $this->processPhysicalReset($request);
+        } else {
+            if (empty($request['penjualan_id'])) {
+                throw new \RuntimeException("ID Penjualan diperlukan untuk koreksi data");
+            }
+            $this->processDataCorrection($request);
         }
 
-        // **Update status request (tanpa sentuh data lain)**
-        $this->resetModel->update($id, [
-            'status' => 'approved',
-            'approved_by' => session()->get('user_id'),
-            'approved_at' => date('Y-m-d H:i:s')
+        // 4. Update status permintaan
+        $this->db->table('meter_reset_request')
+            ->where('id', $id)
+            ->update([
+                'status' => 'approved',
+                'approved_by' => session()->get('user_id'),
+                'approved_at' => date('Y-m-d H:i:s')
+            ]);
+
+        // 5. Buka kunci nozzle
+        $this->nozzleModel->update($request['nozzle_id'], [
+            'is_locked' => 0,
+            'lock_reason' => null
         ]);
 
-        $db->transComplete();
-        return redirect()->to('/admin/approvals')->with('success', 'Reset disetujui');
+        // Commit transaksi
+        $this->db->transComplete();
+
+        log_message('debug', 'Approval berhasil untuk ID: '.$id);
+        return redirect()->to('/admin/approvals')->with('success', 'Approval berhasil');
 
     } catch (\Exception $e) {
-        $db->transRollback();
-        return redirect()->back()->with('error', 'Gagal: ' . $e->getMessage());
+        // Rollback transaksi jika ada error
+        $this->db->transRollback();
+        
+        log_message('error', 'Gagal approve ID '.$id.': '.$e->getMessage());
+        return redirect()->back()->with('error', 'Gagal: '.$e->getMessage());
     }
 }
 
-private function _handleCorrection($request)
-{
-    $penjualanModel = model('PenjualanModel');
-    $lastSale = $penjualanModel->where('nozzle_id', $request['nozzle_id'])
-        ->orderBy('tanggal', 'DESC')
-        ->orderBy('shift', 'DESC')
-        ->first();
+    private function processPhysicalReset($request)
+    {
+        // 1. Update nozzle (TIDAK BERUBAH)
+        $this->nozzleModel->update($request['nozzle_id'], [
+            'current_meter' => $request['meter_awal_baru'],
+            'last_reset_at' => date('Y-m-d H:i:s')
+        ]);
 
-    if ($lastSale) {
-        $penjualanModel->update($lastSale['id'], [
+        // 2. Update penjualan yang belum diapprove (DITAMBAHKAN)
+        $this->penjualanModel
+            ->where('nozzle_id', $request['nozzle_id'])
+            ->where('approval_status', 'pending')
+            ->where('tanggal >=', date('Y-m-d')) // hanya yang tanggalnya sama atau setelah reset
+            ->set([
+                'meter_awal' => $request['meter_awal_baru'],
+                'volume' => "meter_akhir - {$request['meter_awal_baru']}"
+            ])
+            ->update();
+
+        // 3. Catat log (TIDAK BERUBAH)
+        $this->logModel->insert([
+            'tanggal' => date('Y-m-d H:i:s'),
+            'kode_spbu' => $request['kode_spbu'],
+            'nozzle_id' => $request['nozzle_id'],
+            'meter_awal' => $request['meter_awal_lama'],
             'meter_akhir' => $request['meter_awal_baru'],
-            'is_adjusted' => 1
+            'action' => 'physical_reset',
+            'executed_by' => session()->get('user_id'),
+            'notes' => 'Reset fisik. Alasan: ' . $request['alasan'], // DIPERBAIKI
+            'approval_status' => 'approved',
+            'approved_at' => date('Y-m-d H:i:s')
         ]);
     }
-}
 
-    public function rejectReset($id)
+    private function processDataCorrection($request)
     {
-        if (session()->get('role') != 'admin_region') {
-        return redirect()->to('/unauthorized');
+        // 1. Dapatkan data penjualan
+        $penjualan = $this->penjualanModel->find($request['penjualan_id']);
+        if (!$penjualan) {
+            throw new \RuntimeException("Data penjualan tidak ditemukan");
+        }
+
+        // 2. Update penjualan
+        $this->penjualanModel->update($request['penjualan_id'], [
+            'meter_akhir' => $request['meter_awal_baru'],
+            'volume' => $request['meter_awal_baru'] - $penjualan['meter_awal'],
+            'is_adjusted' => 1
+        ]);
+
+        // 3. Update nozzle
+        $this->nozzleModel->update($request['nozzle_id'], [
+            'current_meter' => $request['meter_awal_baru']
+        ]);
+
+        // 4. Catat log SESUAI STRUKTUR
+        $this->logModel->insert([
+            'tanggal' => date('Y-m-d H:i:s'),
+            'kode_spbu' => $request['kode_spbu'],
+            'nozzle_id' => $request['nozzle_id'],
+            'shift' => $penjualan['shift'],
+            'meter_awal' => $penjualan['meter_awal'],
+            'meter_akhir' => $request['meter_awal_baru'],
+            'harga_jual' => $penjualan['harga_jual'],
+            'action' => 'data_correction',
+            'executed_by' => session()->get('user_id'),
+            'notes' => 'Koreksi data. Penjualan ID: ' . $request['penjualan_id'],
+            'approval_status' => 'approved',
+            'approved_at' => date('Y-m-d H:i:s')
+        ]);
     }
 
+    // METHOD REJECT YANG SUDAH ADA
+public function rejectReset($id)
+{
+    $this->db->transStart();
+    try {
+        $request = $this->resetModel->find($id);
+        
         $this->resetModel->update($id, [
             'status' => 'rejected',
             'approved_by' => session()->get('user_id'),
             'approved_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->to('/admin/approvals')->with('success', 'Permintaan reset telah ditolak');
+        // Buka kunci nozzle
+        $this->nozzleModel->update($request['nozzle_id'], [
+            'is_locked' => 0,
+            'lock_reason' => null
+        ]);
+
+        $this->db->transComplete();
+        return redirect()->to('/admin/approvals')->with('success', 'Permintaan reset ditolak');
+
+    } catch (\Exception $e) {
+        $this->db->transRollback();
+        return redirect()->back()->with('error', 'Gagal: '.$e->getMessage());
     }
+}
+
+    // METHOD HISTORY YANG SUDAH ADA
     public function history()
     {
         $data = [
@@ -146,9 +220,98 @@ private function _handleCorrection($request)
                 ->where('status !=', 'pending')
                 ->orderBy('approved_at', 'DESC')
                 ->findAll(),
-            'operatorNames' => $this->_getOperatorNames()
+            'operatorNames' => $this->getOperatorNames()
         ];
 
         return view('admin/reset_history', $data);
+    }
+
+    /*********************
+     * PRIVATE METHODS
+     *********************/
+    private function getValidatedRequest($id)
+    {
+        $request = $this->resetModel->find($id);
+        if (!$request) {
+            throw new \RuntimeException("Data permintaan tidak ditemukan");
+        }
+
+        // Fallback untuk reset_type
+        if (!isset($request['reset_type'])) {
+            $request['reset_type'] = 'physical';
+            log_message('warning', 'Reset type tidak ditemukan, menggunakan default physical');
+        }
+
+        return $request;
+    }
+
+
+    private function handleDataCorrection($request)
+    {
+        if (empty($request['penjualan_id'])) {
+            throw new \RuntimeException("ID Penjualan diperlukan untuk koreksi data");
+        }
+
+        $penjualan = $this->penjualanModel->find($request['penjualan_id']);
+        if (!$penjualan) {
+            throw new \RuntimeException("Data penjualan tidak ditemukan");
+        }
+
+        // Update data penjualan
+        $this->penjualanModel->update($request['penjualan_id'], [
+            'meter_akhir' => $request['meter_awal_baru'],
+            'volume' => $request['meter_awal_baru'] - $penjualan['meter_awal'],
+            'is_adjusted' => 1
+        ]);
+
+        // Update nozzle
+        $this->nozzleModel->update($request['nozzle_id'], [
+            'current_meter' => $request['meter_awal_baru']
+        ]);
+
+        // Adjust shift berikutnya
+        $this->adjustSubsequentShifts($request['penjualan_id'], $request['meter_awal_baru']);
+    }
+
+    private function adjustSubsequentShifts($penjualan_id, $new_meter)
+    {
+        $currentSale = $this->penjualanModel->find($penjualan_id);
+        $nextSales = $this->penjualanModel
+            ->where('nozzle_id', $currentSale['nozzle_id'])
+            ->where('tanggal >=', $currentSale['tanggal'])
+            ->where('shift >', $currentSale['shift'])
+            ->orderBy('tanggal', 'ASC')
+            ->orderBy('shift', 'ASC')
+            ->findAll();
+
+        foreach ($nextSales as $nextSale) {
+            $this->penjualanModel->update($nextSale['id'], [
+                'meter_awal' => $new_meter,
+                'volume' => $nextSale['meter_akhir'] - $new_meter
+            ]);
+            $new_meter = $nextSale['meter_akhir'];
+        }
+    }
+
+    private function updateRequestStatus($id)
+    {
+        $this->resetModel->update($id, [
+            'status' => 'approved',
+            'approved_by' => session()->get('user_id'),
+            'approved_at' => date('Y-m-d H:i:s')
+        ]);
+    }
+
+    private function getOperatorNames()
+    {
+        $operatorModel = new \App\Models\OperatorModel();
+        $operators = $operatorModel->findAll();
+
+        $names = [];
+        foreach ($operators as $operator) {
+            $names[$operator['id']] = $operator['nama_operator'];
+        }
+
+        return $names;
     }
 }

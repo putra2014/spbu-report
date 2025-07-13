@@ -175,4 +175,10 @@ class Nozzle extends BaseController
         $this->nozzleModel->delete($id);
         return redirect()->to('/nozzle')->with('success', 'Nozzle berhasil dihapus.');
     }
+    public function getByDispenser()
+    {
+        $dispenserId = $this->request->getGet('dispenser_id');
+        $nozzles = $this->nozzleModel->where('dispenser_id', $dispenserId)->findAll();
+        return $this->response->setJSON($nozzles);
+    }
 }

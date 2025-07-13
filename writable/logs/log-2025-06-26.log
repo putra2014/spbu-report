@@ -1,0 +1,980 @@
+DEBUG - 2025-06-26 15:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:48:51 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+DEBUG - 2025-06-26 15:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:24 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+DEBUG - 2025-06-26 15:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 15:56:50 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+DEBUG - 2025-06-26 15:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:11:07 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+DEBUG - 2025-06-26 16:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 16:13:53 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+DEBUG - 2025-06-26 13:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 13:59:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'spbu_db', 3306, '', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-06-26 13:59:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-26 13:59:53 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'spbu_db', 3306, '', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-06-26 13:59:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 14:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:00:26 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+DEBUG - 2025-06-26 14:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:07:45 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+WARNING - 2025-06-26 14:07:50 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 561.
+ 1 APPPATH\Controllers\Penjualan.php(561): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(539): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 14:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:08:16 --> Meter Debug: Array
+(
+    [nozzle_current] => 500.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 320.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-25 15:23:54
+            [approved_by] => 1
+            [created_at] => 2025-06-25 15:23:35
+            [updated_at] => 2025-06-25 15:23:35
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+        )
+
+)
+
+WARNING - 2025-06-26 14:08:24 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 561.
+ 1 APPPATH\Controllers\Penjualan.php(561): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(539): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 14:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:13 --> Meter Debug: Array
+(
+    [nozzle_current] => 0.00
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+WARNING - 2025-06-26 14:12:18 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 561.
+ 1 APPPATH\Controllers\Penjualan.php(561): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(539): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 14:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 14:12:25 --> Meter Debug: Array
+(
+    [nozzle_current] => 0.00
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+WARNING - 2025-06-26 14:12:33 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 561.
+ 1 APPPATH\Controllers\Penjualan.php(561): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(539): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 14:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:15 --> Meter Debug: Array
+(
+    [nozzle_current] => 0.00
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+DEBUG - 2025-06-26 18:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:37 --> Meter Debug: Array
+(
+    [nozzle_current] => 0.00
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+DEBUG - 2025-06-26 18:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:04 --> Meter Debug: Array
+(
+    [nozzle_current] => 0.00
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+WARNING - 2025-06-26 18:12:17 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 559.
+ 1 APPPATH\Controllers\Penjualan.php(559): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(537): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 18:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:31 --> Meter Debug: Array
+(
+    [nozzle_current] => 200.00
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+WARNING - 2025-06-26 18:12:39 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 559.
+ 1 APPPATH\Controllers\Penjualan.php(559): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(537): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 18:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:48 --> Memulai approval untuk ID: 3
+DEBUG - 2025-06-26 18:13:48 --> Data request dari DB: Array
+(
+    [id] => 3
+    [penjualan_id] => 5
+    [kode_spbu] => 7490123
+    [nozzle_id] => 1
+    [meter_awal_lama] => 300.00
+    [meter_awal_baru] => 250.00
+    [requested_by] => 4
+    [alasan] => kerusakan
+    [approved_at] => 
+    [approved_by] => 
+    [created_at] => 2025-06-26 18:13:32
+    [updated_at] => 2025-06-26 18:13:32
+    [status] => pending
+    [catatan] => 
+    [bukti_reset] => 
+    [reset_type] => correction
+    [requested_at] => 2025-06-26 18:13:32
+    [is_permanent] => 0
+)
+
+DEBUG - 2025-06-26 18:13:48 --> Approval berhasil untuk ID: 3
+DEBUG - 2025-06-26 18:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:14:40 --> Meter Debug: Array
+(
+    [nozzle_current] => 250.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 3
+            [penjualan_id] => 5
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 300.00
+            [meter_awal_baru] => 250.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-26 18:13:48
+            [approved_by] => 1
+            [created_at] => 2025-06-26 18:13:32
+            [updated_at] => 2025-06-26 18:13:32
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => correction
+            [requested_at] => 2025-06-26 18:13:32
+            [is_permanent] => 0
+        )
+
+)
+
+WARNING - 2025-06-26 18:14:52 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 559.
+ 1 APPPATH\Controllers\Penjualan.php(559): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(537): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 18:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:15:46 --> Meter Debug: Array
+(
+    [nozzle_current] => 3550.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 3
+            [penjualan_id] => 5
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 300.00
+            [meter_awal_baru] => 250.00
+            [requested_by] => 4
+            [alasan] => kerusakan
+            [approved_at] => 2025-06-26 18:13:48
+            [approved_by] => 1
+            [created_at] => 2025-06-26 18:13:32
+            [updated_at] => 2025-06-26 18:13:32
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => correction
+            [requested_at] => 2025-06-26 18:13:32
+            [is_permanent] => 0
+        )
+
+)
+
+WARNING - 2025-06-26 18:15:50 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Penjualan.php on line 559.
+ 1 APPPATH\Controllers\Penjualan.php(559): strtotime(null)
+ 2 APPPATH\Controllers\Penjualan.php(537): App\Controllers\Penjualan->_validateDate(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->getLastMeter('1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 18:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:33 --> Memulai approval untuk ID: 4
+DEBUG - 2025-06-26 18:16:33 --> Data request dari DB: Array
+(
+    [id] => 4
+    [penjualan_id] => 6
+    [kode_spbu] => 7490123
+    [nozzle_id] => 1
+    [meter_awal_lama] => 3550.00
+    [meter_awal_baru] => 350.00
+    [requested_by] => 4
+    [alasan] => salah_input
+    [approved_at] => 
+    [approved_by] => 
+    [created_at] => 2025-06-26 18:15:37
+    [updated_at] => 2025-06-26 18:15:37
+    [status] => pending
+    [catatan] => 
+    [bukti_reset] => 
+    [reset_type] => correction
+    [requested_at] => 2025-06-26 18:15:37
+    [is_permanent] => 0
+)
+
+DEBUG - 2025-06-26 18:16:33 --> Approval berhasil untuk ID: 4
+DEBUG - 2025-06-26 18:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 18:28:06 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: penjualan/create]
+in APPPATH\Controllers\Penjualan.php on line 76.
+ 1 APPPATH\Controllers\Penjualan.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\spbu-report\\app\\Controllers\\Penjualan.php', 76)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-26 18:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 18:40:52 --> Error in Penjualan/create: Nozzle debug tidak ditemukan
+DEBUG - 2025-06-26 18:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 18:41:01 --> Error in Penjualan/create: Nozzle debug tidak ditemukan
+DEBUG - 2025-06-26 18:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 18:41:03 --> Error in Penjualan/create: Nozzle debug tidak ditemukan
+DEBUG - 2025-06-26 18:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-26 18:41:04 --> Error in Penjualan/create: Nozzle debug tidak ditemukan
+DEBUG - 2025-06-26 18:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 18:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 19:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 19:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:04 --> Meter Debug: Array
+(
+    [nozzle_current] => 0
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+DEBUG - 2025-06-26 22:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:12 --> Meter Debug: Array
+(
+    [nozzle_current] => 0
+    [last_sale_today] => 
+    [last_reset] => 
+)
+
+DEBUG - 2025-06-26 22:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:23 --> Meter Debug: Array
+(
+    [nozzle_current] => 400.00
+    [last_sale_today] => Array
+        (
+            [id] => 1
+            [tanggal] => 2025-06-26 00:00:00
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [shift] => 1
+            [meter_awal] => 300.00
+            [meter_akhir] => 400.00
+            [volume] => 100.00
+            [harga_jual] => 10000.00
+            [total_penjualan] => 1000000.00
+            [operator_id] => 1
+            [approved_by] => 
+            [created_at] => 2025-06-26 22:14:20
+            [updated_at] => 2025-06-26 22:14:20
+            [alasan_reset] => 
+            [adjusted_by] => 
+            [adjusted_at] => 
+            [approved_at] => 
+            [approval_status] => approved
+            [is_adjusted] => 0
+            [is_reset] => 0
+        )
+
+    [last_reset] => 
+)
+
+DEBUG - 2025-06-26 22:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:49 --> Meter Debug: Array
+(
+    [nozzle_current] => 400.00
+    [last_sale_today] => Array
+        (
+            [id] => 1
+            [tanggal] => 2025-06-26 00:00:00
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [shift] => 1
+            [meter_awal] => 300.00
+            [meter_akhir] => 400.00
+            [volume] => 100.00
+            [harga_jual] => 10000.00
+            [total_penjualan] => 1000000.00
+            [operator_id] => 1
+            [approved_by] => 
+            [created_at] => 2025-06-26 22:14:20
+            [updated_at] => 2025-06-26 22:14:20
+            [alasan_reset] => 
+            [adjusted_by] => 
+            [adjusted_at] => 
+            [approved_at] => 
+            [approval_status] => approved
+            [is_adjusted] => 0
+            [is_reset] => 0
+        )
+
+    [last_reset] => 
+)
+
+DEBUG - 2025-06-26 22:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:21 --> Memulai approval untuk ID: 5
+DEBUG - 2025-06-26 22:16:21 --> Data request dari DB: Array
+(
+    [id] => 5
+    [penjualan_id] => 2
+    [kode_spbu] => 7490123
+    [nozzle_id] => 1
+    [meter_awal_lama] => 650.00
+    [meter_awal_baru] => 600.00
+    [requested_by] => 4
+    [alasan] => salah_input
+    [approved_at] => 
+    [approved_by] => 
+    [created_at] => 2025-06-26 22:15:27
+    [updated_at] => 2025-06-26 22:15:27
+    [status] => pending
+    [catatan] => 
+    [bukti_reset] => 
+    [reset_type] => correction
+    [requested_at] => 2025-06-26 22:15:27
+    [is_permanent] => 0
+)
+
+DEBUG - 2025-06-26 22:16:21 --> Approval berhasil untuk ID: 5
+DEBUG - 2025-06-26 22:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:41 --> Meter Debug: Array
+(
+    [nozzle_current] => 600.00
+    [last_sale_today] => Array
+        (
+            [id] => 2
+            [tanggal] => 2025-06-26 00:00:00
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [shift] => 2
+            [meter_awal] => 400.00
+            [meter_akhir] => 600.00
+            [volume] => 200.00
+            [harga_jual] => 10000.00
+            [total_penjualan] => 2000000.00
+            [operator_id] => 1
+            [approved_by] => 
+            [created_at] => 2025-06-26 22:14:57
+            [updated_at] => 2025-06-26 22:16:21
+            [alasan_reset] => 
+            [adjusted_by] => 
+            [adjusted_at] => 
+            [approved_at] => 
+            [approval_status] => approved
+            [is_adjusted] => 1
+            [is_reset] => 0
+        )
+
+    [last_reset] => Array
+        (
+            [id] => 5
+            [penjualan_id] => 2
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 650.00
+            [meter_awal_baru] => 600.00
+            [requested_by] => 4
+            [alasan] => salah_input
+            [approved_at] => 2025-06-26 22:16:21
+            [approved_by] => 1
+            [created_at] => 2025-06-26 22:15:27
+            [updated_at] => 2025-06-26 22:15:27
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => correction
+            [requested_at] => 2025-06-26 22:15:27
+            [is_permanent] => 0
+        )
+
+)
+
+DEBUG - 2025-06-26 22:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:50 --> Meter Debug: Array
+(
+    [nozzle_current] => 600.00
+    [last_sale_today] => Array
+        (
+            [id] => 2
+            [tanggal] => 2025-06-26 00:00:00
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [shift] => 2
+            [meter_awal] => 400.00
+            [meter_akhir] => 600.00
+            [volume] => 200.00
+            [harga_jual] => 10000.00
+            [total_penjualan] => 2000000.00
+            [operator_id] => 1
+            [approved_by] => 
+            [created_at] => 2025-06-26 22:14:57
+            [updated_at] => 2025-06-26 22:16:21
+            [alasan_reset] => 
+            [adjusted_by] => 
+            [adjusted_at] => 
+            [approved_at] => 
+            [approval_status] => approved
+            [is_adjusted] => 1
+            [is_reset] => 0
+        )
+
+    [last_reset] => Array
+        (
+            [id] => 5
+            [penjualan_id] => 2
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 650.00
+            [meter_awal_baru] => 600.00
+            [requested_by] => 4
+            [alasan] => salah_input
+            [approved_at] => 2025-06-26 22:16:21
+            [approved_by] => 1
+            [created_at] => 2025-06-26 22:15:27
+            [updated_at] => 2025-06-26 22:15:27
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => correction
+            [requested_at] => 2025-06-26 22:15:27
+            [is_permanent] => 0
+        )
+
+)
+
+DEBUG - 2025-06-26 22:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:16:57 --> Meter Debug: Array
+(
+    [nozzle_current] => 600.00
+    [last_sale_today] => Array
+        (
+            [id] => 2
+            [tanggal] => 2025-06-26 00:00:00
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [shift] => 2
+            [meter_awal] => 400.00
+            [meter_akhir] => 600.00
+            [volume] => 200.00
+            [harga_jual] => 10000.00
+            [total_penjualan] => 2000000.00
+            [operator_id] => 1
+            [approved_by] => 
+            [created_at] => 2025-06-26 22:14:57
+            [updated_at] => 2025-06-26 22:16:21
+            [alasan_reset] => 
+            [adjusted_by] => 
+            [adjusted_at] => 
+            [approved_at] => 
+            [approval_status] => approved
+            [is_adjusted] => 1
+            [is_reset] => 0
+        )
+
+    [last_reset] => Array
+        (
+            [id] => 5
+            [penjualan_id] => 2
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 650.00
+            [meter_awal_baru] => 600.00
+            [requested_by] => 4
+            [alasan] => salah_input
+            [approved_at] => 2025-06-26 22:16:21
+            [approved_by] => 1
+            [created_at] => 2025-06-26 22:15:27
+            [updated_at] => 2025-06-26 22:15:27
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => correction
+            [requested_at] => 2025-06-26 22:15:27
+            [is_permanent] => 0
+        )
+
+)
+
+DEBUG - 2025-06-26 22:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-26 22:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

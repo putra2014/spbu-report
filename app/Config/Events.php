@@ -52,4 +52,19 @@ Events::on('pre_system', static function (): void {
             });
         }
     }
+    Events::on('postStokUpdate', function($stokId) {
+    $stokModel = new \App\Models\StokModel();
+    $stok = $stokModel->find($stokId);
+
+    if ($stok['status_loss'] === 'audit' && !$stok['is_notified']) {
+        $notif = new \App\Models\NotifikasiModel();
+        $notif->insert([
+            'user_id' => $stokModel->_getAdminRegionId(),
+            'tipe' => 'audit_stok',
+            'pesan' => "Temuan audit stok di SPBU {$stok['kode_spbu']}",
+            'link' => "/stok/audit/detail/{$stokId}"
+        ]);
+        $stokModel->update($stokId, ['is_notified' => true]);
+    }
+});
 });

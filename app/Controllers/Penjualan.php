@@ -10,6 +10,8 @@ use App\Models\MeterResetRequestModel;
 use App\Models\ProdukModel;
 use App\Models\TangkiModel;
 use App\Models\SpbuModel;
+use App\Models\DispenserModel;
+use App\Models\StokModel;
 
 class Penjualan extends BaseController
 {
@@ -22,7 +24,9 @@ class Penjualan extends BaseController
     protected $produkModel;
     protected $tangkiModel;
     protected $spbuModel;
+    protected $dispenserModel;
     protected $db;
+    protected $stokModel;
 
     public function __construct()
     {
@@ -35,7 +39,9 @@ class Penjualan extends BaseController
         $this->produkModel = new ProdukModel();
         $this->tangkiModel = new TangkiModel();
         $this->spbuModel = new SpbuModel();
+        $this->dispenserModel = new DispenserModel();
         $this->db = \Config\Database::connect();
+        $this->stokModel = new StokModel();
         helper('Access');
     }
 
@@ -44,27 +50,19 @@ class Penjualan extends BaseController
         $role = session()->get('role');
         $kode_spbu = session()->get('kode_spbu');
 
-        if ($role === 'admin_spbu') {
+        $builder = $this->penjualanModel
+            ->select('penjualan_harian.*, nozzle.kode_nozzle, produk_bbm.nama_produk, operator.nama_operator')
+            ->join('nozzle', 'nozzle.id = penjualan_harian.nozzle_id')
+            ->join('produk_bbm', 'produk_bbm.kode_produk = nozzle.kode_produk', 'left')
+            ->join('operator', 'operator.id = penjualan_harian.operator_id', 'left')
+            ->orderBy('tanggal DESC, shift ASC');
 
-            $data['penjualan'] = $this->penjualanModel
-                ->select('penjualan_harian.*, nozzle.kode_nozzle, produk_bbm.nama_produk, operator.nama_operator')
-                ->join('nozzle', 'nozzle.id = penjualan_harian.nozzle_id')
-                ->join('produk_bbm', 'produk_bbm.kode_produk = nozzle.kode_produk', 'left')
-                ->join('operator', 'operator.id = penjualan_harian.operator_id', 'left')
-                ->orderBy('tanggal DESC, shift ASC')
-                ->where('penjualan_harian.kode_spbu', $kode_spbu)
-                ->findAll();
-        } else {
-            $data['penjualan'] = $this->penjualanModel
-                ->select('penjualan_harian.*, nozzle.kode_nozzle, produk_bbm.nama_produk, operator.nama_operator')
-                ->join('nozzle', 'nozzle.id = penjualan_harian.nozzle_id')
-                ->join('produk_bbm', 'produk_bbm.kode_produk = nozzle.kode_produk', 'left')
-                ->join('operator', 'operator.id = penjualan_harian.operator_id', 'left')
-                ->orderBy('tanggal DESC, shift ASC')
-                ->findAll();
+        if ($role === 'admin_spbu') {
+            $builder->where('penjualan_harian.kode_spbu', $kode_spbu);
         }
 
-            return view('penjualan/index', $data);
+        $data['penjualan'] = $builder->findAll();
+        return view('penjualan/index', $data);
     }
 
     public function create()
@@ -74,22 +72,49 @@ class Penjualan extends BaseController
         }
 
         $kode_spbu = session()->get('kode_spbu');
-
+        $role = session()->get('role');
+        
         $data = [
             'operatorList' => $this->operatorModel->where('kode_spbu', $kode_spbu)->findAll(),
-            'nozzleList' => $this->nozzleModel->where('kode_spbu', $kode_spbu)->findAll(),
+            'dispensers' => $this->dispenserModel->where('kode_spbu', $kode_spbu)->findAll(),
             'showResetButton' => $this->_shouldShowResetButton($kode_spbu),
-            'lastMeters' => $this->_getLastMeters($kode_spbu)
+            'lastMeters' => $this->_getLastMeters($kode_spbu),
+            'disable_meter_awal' => true
         ];
+
+        if ($role === 'admin_region') {
+            $data['spbuList'] = $this->spbuModel->findAll();
+        }
 
         return view('penjualan/create', $data);
     }
 
     public function store()
     {
-        
         if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
             return redirect()->to('/unauthorized');
+        }
+
+        $validation = \Config\Services::validation();
+        $validation->setRules([
+            'meter_akhir' => 'required|decimal',
+            'meter_awal' => 'required|decimal',
+            'nozzle_id' => 'required|numeric',
+            'shift' => 'required|in_list[1,2,3]',
+            'tanggal' => 'required|valid_date'
+        ]);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        $nozzle_id = $this->request->getPost('nozzle_id');
+        $nozzle = $this->nozzleModel->find($nozzle_id);
+        
+        if ($nozzle['is_locked']) {
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Nozzle ini terkunci: ' . $nozzle['lock_reason']);
         }
 
         $db = \Config\Database::connect();
@@ -97,13 +122,12 @@ class Penjualan extends BaseController
 
         try {
             $kode_spbu = session()->get('kode_spbu');
-            $tanggalInput = $this->request->getPost('tanggal');
-            $tanggal = date('Y-m-d', strtotime($tanggalInput));
+            $tanggal = date('Y-m-d', strtotime($this->request->getPost('tanggal')));
             $shift = $this->request->getPost('shift');
-            $nozzle_id = $this->request->getPost('nozzle_id');
-            $meter_awal = (float) $this->request->getPost('meter_awal');
-            $meter_akhir = (float) $this->request->getPost('meter_akhir');
+            $meter_awal = (float)$this->request->getPost('meter_awal');
+            $meter_akhir = (float)$this->request->getPost('meter_akhir');
             $operator_id = $this->request->getPost('operator_id');
+            $user_id = session()->get('user_id');
 
             $existing = $this->penjualanModel
                 ->where('kode_spbu', $kode_spbu)
@@ -113,36 +137,20 @@ class Penjualan extends BaseController
                 ->first();
 
             if ($existing) {
-                $nozzle = $this->nozzleModel->find($nozzle_id);
-                $errorMsg = "Data penjualan sudah ada untuk:<br>";
-                $errorMsg .= "- Tanggal: ".date('d/m/Y', strtotime($tanggal))."<br>";
-                $errorMsg .= "- Shift: $shift<br>";
-                $errorMsg .= "- Nozzle: ".($nozzle ? $nozzle['kode_nozzle'] : 'Unknown')."<br>";
-                $errorMsg .= "Meter akhir: ".number_format($existing['meter_akhir'], 2)." L";
-                
-                throw new \RuntimeException($errorMsg);
-            }
-
-            if ($meter_akhir < $meter_awal) {
-                throw new \RuntimeException('Meter akhir tidak boleh lebih kecil dari meter awal');
+                throw new \RuntimeException("Data penjualan sudah ada untuk shift ini");
             }
 
             $lastMeter = $this->_getLastMeter($kode_spbu, $nozzle_id);
             if ($meter_awal < $lastMeter) {
-                throw new \RuntimeException("Meter awal tidak boleh lebih kecil dari $lastMeter");
-            }
-
-            $nozzle = $this->nozzleModel->find($nozzle_id);
-            if (!$nozzle || empty($nozzle['kode_tangki'])) {
-                throw new \RuntimeException('Konfigurasi nozzle tidak valid: Tangki tidak terdefinisi');
+                throw new \RuntimeException("Meter awal tidak valid");
             }
 
             $tangki = $this->tangkiModel->where('kode_spbu', $kode_spbu)
-                        ->where('kode_tangki', $nozzle['kode_tangki'])
-                        ->first();
-            
-            if (!$tangki || empty($tangki['kode_produk'])) {
-                throw new \RuntimeException('Konfigurasi tangki tidak valid: Produk tidak terdefinisi');
+                ->where('kode_tangki', $nozzle['kode_tangki'])
+                ->first();
+
+            if (!$tangki) {
+                throw new \RuntimeException('Konfigurasi tangki tidak valid');
             }
 
             $harga = $this->hargaModel
@@ -151,16 +159,11 @@ class Penjualan extends BaseController
                 ->first();
 
             if (!$harga) {
-                $produk = $this->produkModel->where('kode_produk', $tangki['kode_produk'])->first();
-                $nama_produk = $produk ? $produk['nama_produk'] : $tangki['kode_produk'];
-                throw new \RuntimeException("Harga untuk $nama_produk belum ditentukan. Silakan atur harga terlebih dahulu.");
+                throw new \RuntimeException("Harga produk belum ditentukan");
             }
 
-            
-            
             $volume = $meter_akhir - $meter_awal;
-            $harga_jual = $harga['harga_jual'];
-            $total_penjualan = $volume * $harga_jual;
+            $total_penjualan = $volume * $harga['harga_jual'];
 
             $penjualanData = [
                 'kode_spbu' => $kode_spbu,
@@ -169,267 +172,43 @@ class Penjualan extends BaseController
                 'nozzle_id' => $nozzle_id,
                 'meter_awal' => $meter_awal,
                 'meter_akhir' => $meter_akhir,
-                'volume' => $volume,
-                'harga_jual' => $harga_jual,
-                'total_penjualan' => $total_penjualan,
+                'harga_jual' => $harga['harga_jual'],
                 'operator_id' => $operator_id,
+                'approved_by' => $user_id,
+                'approved_at' => date('Y-m-d H:i:s'),
                 'approval_status' => 'approved'
             ];
 
             if (!$this->penjualanModel->save($penjualanData)) {
-                throw new \RuntimeException('Gagal menyimpan penjualan: ' . implode(', ', $this->penjualanModel->errors()));
+                throw new \RuntimeException('Gagal menyimpan penjualan');
             }
 
-            $this->logModel->save($penjualanData);
+            $penjualanId = $this->penjualanModel->getInsertID();
+            $nozzle = $this->nozzleModel->find($nozzle_id);
+            $tangki = $this->tangkiModel->where('kode_spbu', $kode_spbu)
+                                       ->where('kode_tangki', $nozzle['kode_tangki'])
+                                       ->first();
+
+            if (!$tangki) {
+                throw new \RuntimeException('Konfigurasi tangki tidak valid');
+            }
+
+            // 2. Update stok_bbm
+            $penjualanModel = new \App\Models\PenjualanModel();
+            $this->stokModel->updateStok($tangki['id'], $volume, 'kurang');
+
+            // 3. Update stok di tabel tangki (jika diperlukan)
+            $this->tangkiModel->update($tangki['id'], [
+                'stok' => $tangki['stok'] - $volume
+]);
             $this->nozzleModel->update($nozzle_id, ['current_meter' => $meter_akhir]);
-            
+            $this->_createLog($penjualanId, 'create', $user_id, 'Input penjualan baru');
+
             $db->transComplete();
-
-            return redirect()->to('/penjualan')->with('success', 'Penjualan berhasil disimpan');
-
+            return redirect()->to('/penjualan')->with('success', 'Data berhasil disimpan');
         } catch (\Exception $e) {
             $db->transRollback();
-            log_message('error', 'Error Penjualan/store: ' . $e->getMessage());
-            return redirect()->back()
-                ->with('error', $e->getMessage())
-                ->withInput()
-                ->with('showResetButton', strpos($e->getMessage(), 'Meter awal harus sama') !== false);
-        }
-    }
-
-public function handleReset()
-{
-    if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
-        return redirect()->to('/unauthorized');
-    }
-
-    $validationRules = [
-        'nozzle_id' => 'required|numeric',
-        'meter_awal_baru' => 'required|decimal',
-        'alasan' => 'required|min_length[5]',
-        'reset_type' => 'required|in_list[physical,correction]',
-        'bukti_reset' => 'if_exist|max_size[bukti_reset,2048]|is_image[bukti_reset]',
-    ];
-
-    if ($this->request->getPost('reset_type') === 'correction') {
-        $validationRules['penjualan_id'] = 'required|numeric';
-    }
-
-    if (!$this->validate($validationRules)) {
-        return redirect()->back()
-            ->with('errors', $this->validator->getErrors())
-            ->withInput();
-    }
-
-    // Tangani file upload di Controller saja
-    $file = $this->request->getFile('bukti_reset');
-    $buktiReset = null;
-
-    try {
-        if ($file && $file->isValid() && !$file->hasMoved()) {
-            $newName = $file->getRandomName();
-            $uploadPath = WRITEPATH . 'uploads/reset_bukti';
-            if (!is_dir($uploadPath)) {
-                mkdir($uploadPath, 0777, true);
-            }
-            $file->move($uploadPath, $newName);
-            $buktiReset = $newName;
-        } elseif ($file && $file->getError() !== UPLOAD_ERR_NO_FILE) {
-            throw new \RuntimeException($file->getErrorString());
-        }
-    } catch (\Exception $e) {
-        log_message('error', 'File upload error: ' . $e->getMessage());
-        return redirect()->back()
-            ->with('error', 'Gagal mengupload bukti reset: ' . $e->getMessage())
-            ->withInput();
-    }
-
-    $meterAwalBaru = (float)$this->request->getPost('meter_awal_baru');
-    $resetType = $this->request->getPost('reset_type');
-
-    if ($resetType === 'correction') {
-        $penjualanId = $this->request->getPost('penjualan_id');
-        $penjualan = $this->penjualanModel->find($penjualanId);
-
-        if ($meterAwalBaru < $penjualan['meter_awal']) {
-            return redirect()->back()
-                ->with('error', 'Untuk koreksi data, meter baru tidak boleh lebih kecil dari meter awal (' . number_format($penjualan['meter_awal'], 2) . ' L)')
-                ->withInput();
-        }
-    }
-
-    // Data untuk INSERT manual
-    $data = [
-        'kode_spbu' => session()->get('kode_spbu'),
-        'nozzle_id' => $this->request->getPost('nozzle_id'),
-        'meter_awal_lama' => $this->_getLastMeter(session()->get('kode_spbu'), $this->request->getPost('nozzle_id')),
-        'meter_awal_baru' => $this->request->getPost('meter_awal_baru'),
-        'alasan' => $this->request->getPost('alasan'),
-        'reset_type' => $this->request->getPost('reset_type'),
-        'penjualan_id' => $this->request->getPost('penjualan_id'),
-        'requested_by' => session()->get('user_id'),
-        'status' => 'pending',
-        'approved_by' => null,
-        'approved_at' => null,
-        'bukti_reset' => $buktiReset,
-        'catatan' => $this->request->getPost('catatan'),
-        'created_at' => date('Y-m-d H:i:s'),
-    ];
-
-    // INSERT manual → TANPA validasi Model
-    $this->db->table('meter_reset_request')->insert($data);
-
-    return redirect()->to('/penjualan/reset-requests')
-        ->with('success', 'Permintaan reset telah diajukan. Menunggu persetujuan Admin Region.');
-}
-
-
-    public function approveReset($id)
-    {
-        if (session()->get('role') !== 'admin_region') {
-            return redirect()->to('/unauthorized');
-        }
-    
-        $request = $this->resetModel->find($id);
-        if (!$request) {
-            return redirect()->back()->with('error', 'Permintaan reset tidak ditemukan');
-        }
-    
-        $db = \Config\Database::connect();
-        $db->transStart();
-    
-        try {
-            if ($request['reset_type'] === 'physical') {
-                /********************************************
-                 * HANDLE PHYSICAL RESET (KERUSAKAN/KALIBRASI)
-                 ********************************************/
-                
-                // 1. Update nozzle current meter
-                $this->nozzleModel->update($request['nozzle_id'], [
-                    'current_meter' => $request['meter_awal_baru'],
-                    'last_reset_at' => date('Y-m-d H:i:s')
-                ]);
-            
-                // 2. Log khusus reset fisik (TANPA sentuh data penjualan)
-                $this->logModel->insert([
-                    'nozzle_id' => $request['nozzle_id'],
-                    'kode_spbu' => $request['kode_spbu'],
-                    'action' => 'physical_reset',
-                    'old_value' => $request['meter_awal_lama'],
-                    'new_value' => $request['meter_awal_baru'],
-                    'executed_by' => session()->get('user_id'),
-                    'notes' => $request['alasan'],
-                    'created_at' => date('Y-m-d H:i:s')
-                ]);
-            
-            } else {
-                /********************************************
-                 * HANDLE DATA CORRECTION
-                 ********************************************/
-                
-                // Validasi wajib untuk koreksi data
-                if (empty($request['penjualan_id'])) {
-                    throw new \Exception("Data penjualan tidak ditemukan");
-                }
-            
-                $this->_handleCorrection(
-                    $request['penjualan_id'],
-                    $request['meter_awal_baru'],
-                    $request['alasan']
-                );
-            }
-        
-            // 3. Update status request (untuk semua jenis reset)
-            $this->resetModel->update($id, [
-                'status' => 'approved',
-                'approved_by' => session()->get('user_id'),
-                'approved_at' => date('Y-m-d H:i:s')
-            ]);
-        
-            $db->transComplete();
-            return redirect()->to('/admin/approvals')->with('success', 'Reset meter telah disetujui');
-        
-        } catch (\Exception $e) {
-            $db->transRollback();
-            log_message('error', 'Gagal approve reset: '.$e->getMessage());
-            return redirect()->back()
-                   ->with('error', 'Gagal menyetujui: '.$e->getMessage())
-                   ->withInput();
-        }
-    }
-    
-    private function _handleCorrection($penjualan_id, $new_meter, $alasan)
-    {
-        // 1. Validasi data
-        $currentData = $this->penjualanModel->find($penjualan_id);
-        if (!$currentData) {
-            throw new \Exception("Data penjualan tidak ditemukan");
-        }
-    
-        if ($new_meter < $currentData['meter_awal']) {
-            throw new \Exception(
-                "Meter baru (".number_format($new_meter,2).") ".
-                "tidak boleh kurang dari meter awal (".number_format($currentData['meter_awal'],2).")"
-            );
-        }
-    
-        // 2. Update data penjualan
-        $this->penjualanModel->update($penjualan_id, [
-            'meter_akhir' => $new_meter,
-            'volume' => $new_meter - $currentData['meter_awal'],
-            'alasan_reset' => $alasan,
-            'approved_by' => session()->get('user_id'),
-            'approved_at' => date('Y-m-d H:i:s'),
-            'is_adjusted' => 1
-        ]);
-    
-        // 3. Update nozzle
-        $this->nozzleModel->update($currentData['nozzle_id'], [
-            'current_meter' => $new_meter
-        ]);
-    
-        // 4. Adjust shift berikutnya
-        $this->_adjustSubsequentShifts($penjualan_id, $new_meter);
-    
-        // 5. Catat log koreksi
-        $this->logModel->insert([
-            'penjualan_id' => $penjualan_id,
-            'nozzle_id' => $currentData['nozzle_id'],
-            'kode_spbu' => $currentData['kode_spbu'],
-            'action' => 'data_correction',
-            'old_value' => json_encode([
-                'meter_awal' => $currentData['meter_awal'],
-                'meter_akhir' => $currentData['meter_akhir'],
-                'volume' => $currentData['volume']
-            ]),
-            'new_value' => json_encode([
-                'meter_awal' => $currentData['meter_awal'],
-                'meter_akhir' => $new_meter,
-                'volume' => ($new_meter - $currentData['meter_awal'])
-            ]),
-            'executed_by' => session()->get('user_id'),
-            'notes' => $alasan,
-            'created_at' => date('Y-m-d H:i:s')
-        ]);
-    }
-
-    private function _adjustSubsequentShifts($penjualan_id, $new_meter)
-    {
-        $currentSale = $this->penjualanModel->find($penjualan_id);
-        $nextSales = $this->penjualanModel
-            ->where('nozzle_id', $currentSale['nozzle_id'])
-            ->where('tanggal >=', $currentSale['tanggal'])
-            ->where('shift >', $currentSale['shift'])
-            ->orderBy('tanggal', 'ASC')
-            ->orderBy('shift', 'ASC')
-            ->findAll();
-
-        foreach ($nextSales as $nextSale) {
-            $this->penjualanModel->update($nextSale['id'], [
-                'meter_awal' => $new_meter,
-                'volume' => $nextSale['meter_akhir'] - $new_meter
-            ]);
-            $new_meter = $nextSale['meter_akhir'];
+            return redirect()->back()->withInput()->with('error', $e->getMessage());
         }
     }
 
@@ -440,7 +219,10 @@ public function handleReset()
         }
 
         $data['log'] = $this->logModel
+            ->select('penjualan_harian_log.*, users.username as executed_by_name')
+            ->join('users', 'users.id = penjualan_harian_log.executed_by', 'left')
             ->where('penjualan_id', $id)
+            ->orderBy('created_at', 'DESC')
             ->findAll();
 
         return view('penjualan/log', $data);
@@ -453,59 +235,236 @@ public function handleReset()
             return redirect()->to('/unauthorized');
         }
 
-        $this->penjualanModel->delete($id);
-        return redirect()->to('/penjualan')->with('success', 'Penjualan berhasil dihapus');
+        $db = \Config\Database::connect();
+        $db->transStart();
+
+        try {
+            $this->penjualanModel->delete($id);
+            $this->_createLog($id, 'delete', session()->get('user_id'), 'Hapus data penjualan');
+            
+            $db->transComplete();
+            return redirect()->to('/penjualan')->with('success', 'Penjualan berhasil dihapus');
+        } catch (\Exception $e) {
+            $db->transRollback();
+            return redirect()->back()->with('error', 'Gagal menghapus: ' . $e->getMessage());
+        }
     }
 
-    private function _shouldShowResetButton($kode_spbu)
+    public function handleReset()
     {
-        return $this->penjualanModel
-            ->where('kode_spbu', $kode_spbu)
-            ->countAllResults() > 0;
+        if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
+            return redirect()->to('/unauthorized');
+        }
+
+        $validation = \Config\Services::validation();
+        $validation->setRules([
+            'nozzle_id' => 'required|numeric',
+            'meter_awal_baru' => 'required|decimal',
+            'alasan' => 'required|min_length[5]',
+            'reset_type' => 'required|in_list[physical,correction]'
+        ]);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        $nozzle_id = $this->request->getPost('nozzle_id');
+        $user_id = session()->get('user_id');
+
+        $db = \Config\Database::connect();
+        $db->transStart();
+
+        try {
+            $this->nozzleModel->update($nozzle_id, [
+                'is_locked' => 1,
+                'lock_reason' => 'Menunggu approval reset'
+            ]);
+
+            $file = $this->request->getFile('bukti_reset');
+            $buktiReset = null;
+            
+            if ($file && $file->isValid()) {
+                $newName = $file->getRandomName();
+                $file->move(WRITEPATH.'uploads/reset_bukti', $newName);
+                $buktiReset = $newName;
+            }
+
+            $data = [
+                'kode_spbu' => session()->get('kode_spbu'),
+                'nozzle_id' => $nozzle_id,
+                'meter_awal_lama' => $this->_getLastMeter(session()->get('kode_spbu'), $nozzle_id),
+                'meter_awal_baru' => (float)$this->request->getPost('meter_awal_baru'),
+                'alasan' => $this->request->getPost('alasan'),
+                'reset_type' => $this->request->getPost('reset_type'),
+                'penjualan_id' => ($this->request->getPost('reset_type') === 'correction') 
+                                  ? $this->request->getPost('penjualan_id') 
+                                  : null,
+                'requested_by' => $user_id,
+                'status' => 'pending',
+                'bukti_reset' => $buktiReset
+            ];
+
+            if (!$this->resetModel->save($data)) {
+                throw new \RuntimeException('Gagal menyimpan permintaan reset');
+            }
+
+            $requestId = $this->resetModel->getInsertID();
+            $this->_createLog($requestId, 'reset_request', $user_id, 'Permintaan reset meter');
+
+            $db->transComplete();
+            return redirect()->to('/penjualan/reset-requests')
+                ->with('success', 'Permintaan reset diajukan!');
+        } catch (\Exception $e) {
+            $db->transRollback();
+            $this->nozzleModel->update($nozzle_id, [
+                'is_locked' => 0,
+                'lock_reason' => null
+            ]);
+            return redirect()->back()
+                ->with('error', 'Gagal: '.$e->getMessage())
+                ->withInput();
+        }
     }
 
-    private function _getLastMeter($kode_spbu, $nozzle_id) 
+    public function resetRequests()
     {
-        // 1. Cek nozzle untuk initial meter jika belum ada penjualan
-        $nozzle = $this->nozzleModel->find($nozzle_id);
-        $hasSales = $this->penjualanModel->where('nozzle_id', $nozzle_id)->countAllResults() > 0;
-
-        if (!$hasSales && isset($nozzle['initial_meter'])) {
-            return (float)$nozzle['initial_meter'];
+        if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
+            return redirect()->to('/unauthorized');
         }
 
-        // 2. Ambil meter akhir penjualan terakhir (jika ada)
-        $lastSale = $this->penjualanModel
-            ->where('nozzle_id', $nozzle_id)
-            ->where('kode_spbu', $kode_spbu)
-            ->orderBy('tanggal', 'DESC')
-            ->orderBy('shift', 'DESC')
-            ->first();
+        $data['requests'] = $this->resetModel
+            ->select('meter_reset_request.*, nozzle.kode_nozzle, produk_bbm.nama_produk, users.username as requested_by_name')
+            ->join('nozzle', 'nozzle.id = meter_reset_request.nozzle_id')
+            ->join('produk_bbm', 'produk_bbm.kode_produk = nozzle.kode_produk', 'left')
+            ->join('users', 'users.id = meter_reset_request.requested_by', 'left')
+            ->where('meter_reset_request.kode_spbu', session()->get('kode_spbu'))
+            ->orderBy('created_at', 'DESC')
+            ->findAll();
 
-        if ($lastSale) {
-            return (float)$lastSale['meter_akhir'];
-        }
-
-        // 3. Fallback ke reset terakhir atau 0
-        $lastReset = $this->resetModel
-            ->where('nozzle_id', $nozzle_id)
-            ->where('status', 'approved')
-            ->orderBy('approved_at', 'DESC')
-            ->first();
-
-        return $lastReset ? (float)$lastReset['meter_awal_baru'] : 0;
+        return view('penjualan/reset_requests', $data);
     }
 
-    private function _getLastMeters($kode_spbu)
+    public function approveReset($id)
     {
-        $meters = [];
-        $nozzles = $this->nozzleModel->where('kode_spbu', $kode_spbu)->findAll();
-
-        foreach ($nozzles as $nozzle) {
-            $meters[$nozzle['id']] = $this->_getLastMeter($kode_spbu, $nozzle['id']);
+        if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
+            return redirect()->to('/unauthorized');
         }
 
-        return $meters;
+        $request = $this->resetModel->find($id);
+        if (!$request) {
+            return redirect()->back()->with('error', 'Permintaan tidak ditemukan');
+        }
+
+        $user_id = session()->get('user_id');
+        $db = \Config\Database::connect();
+        $db->transStart();
+
+        try {
+            // Update request status
+            $this->resetModel->update($id, [
+                'status' => 'approved',
+                'approved_by' => $user_id,
+                'approved_at' => date('Y-m-d H:i:s')
+            ]);
+
+            // Update nozzle meter and unlock
+            $this->nozzleModel->update($request['nozzle_id'], [
+                'current_meter' => $request['meter_awal_baru'],
+                'is_locked' => 0,
+                'lock_reason' => null
+            ]);
+
+            // Log the approval
+            $this->_createLog($id, 'reset_approve', $user_id, 'Approval reset meter');
+
+            $db->transComplete();
+            return redirect()->back()->with('success', 'Permintaan reset disetujui');
+        } catch (\Exception $e) {
+            $db->transRollback();
+            return redirect()->back()->with('error', 'Gagal menyetujui: ' . $e->getMessage());
+        }
+    }
+
+    public function rejectReset($id)
+    {
+        if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
+            return redirect()->to('/unauthorized');
+        }
+
+        $request = $this->resetModel->find($id);
+        if (!$request) {
+            return redirect()->back()->with('error', 'Permintaan tidak ditemukan');
+        }
+
+        $user_id = session()->get('user_id');
+        $db = \Config\Database::connect();
+        $db->transStart();
+
+        try {
+            $this->resetModel->update($id, [
+                'status' => 'rejected',
+                'approved_by' => $user_id,
+                'approved_at' => date('Y-m-d H:i:s')
+            ]);
+
+            $this->nozzleModel->update($request['nozzle_id'], [
+                'is_locked' => 0,
+                'lock_reason' => null
+            ]);
+
+            $this->_createLog($id, 'reset_reject', $user_id, 'Penolakan reset meter');
+
+            $db->transComplete();
+            return redirect()->back()->with('success', 'Permintaan reset ditolak');
+        } catch (\Exception $e) {
+            $db->transRollback();
+            return redirect()->back()->with('error', 'Gagal menolak: ' . $e->getMessage());
+        }
+    }
+
+    public function getNozzles()
+{
+    if (!session()->has('kode_spbu') || !session()->has('user_id')) {
+        return $this->response->setStatusCode(401)
+            ->setJSON(['error' => 'Unauthorized']);
+    }
+
+    $dispenserId = $this->request->getGet('dispenser_id');
+    if (!$dispenserId) {
+        return $this->response->setJSON(['error' => 'dispenser_id required']);
+    }
+
+    $nozzles = $this->nozzleModel
+        ->select('id, kode_nozzle, current_meter, initial_meter')
+        ->where('dispenser_id', $dispenserId)
+        ->where('kode_spbu', session()->get('kode_spbu'))
+        ->where('status', 'Aktif')
+        ->findAll();
+
+    // Tambahkan fallback untuk current_meter null
+    $response = array_map(function($nozzle) {
+        return [
+            'id' => $nozzle['id'],
+            'kode_nozzle' => $nozzle['kode_nozzle'],
+            'current_meter' => $nozzle['current_meter'] ?? $nozzle['initial_meter'] ?? 0
+        ];
+    }, $nozzles);
+
+    return $this->response->setJSON($response ?: []);
+}
+
+    public function getLastMeter($nozzle_id)
+    {
+        if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
+            return $this->response->setStatusCode(403);
+        }
+
+        $lastMeter = $this->_getLastMeter(session()->get('kode_spbu'), $nozzle_id);
+
+        return $this->response->setJSON([
+            'success' => true,
+            'lastMeter' => number_format($lastMeter, 2)
+        ]);
     }
 
     public function resetForm()
@@ -516,7 +475,6 @@ public function handleReset()
     
         $kode_spbu = session()->get('kode_spbu');
         
-        // Data nozzle dengan meter terakhir
         $data['nozzles'] = $this->nozzleModel
             ->select('nozzle.*, 
                 (SELECT meter_akhir FROM penjualan_harian 
@@ -525,7 +483,6 @@ public function handleReset()
             ->where('kode_spbu', $kode_spbu)
             ->findAll();
     
-        // Data penjualan terakhir untuk koreksi
         $data['lastSales'] = $this->penjualanModel
             ->select('penjualan_harian.id, penjualan_harian.shift, penjualan_harian.tanggal, 
                      penjualan_harian.meter_awal, penjualan_harian.meter_akhir, nozzle.kode_nozzle')
@@ -549,7 +506,8 @@ public function handleReset()
 
         $data = [
             'nozzles' => $nozzles,
-            'kode_spbu' => $kode_spbu
+            'kode_spbu' => $kode_spbu,
+            'needInitialSetup' => $this->_needInitialSetup($kode_spbu)
         ];
 
         return view('penjualan/setup_initial_meters', $data);
@@ -575,6 +533,7 @@ public function handleReset()
 
         $meters = $this->request->getPost('meters');
         $isInitialSetup = $this->request->getPost('is_initial_setup') == '1';
+        $user_id = session()->get('user_id');
 
         $db = \Config\Database::connect();
         $db->transStart();
@@ -585,7 +544,7 @@ public function handleReset()
                 $data = ['initial_meter' => $initial_meter];
                 
                 if ($isInitialSetup) {
-                    $this->nozzleModel->update($nozzle_id, $data, true);
+                    $this->nozzleModel->update($nozzle_id, $data);
                     $updated++;
                 } else {
                     $builder = $db->table('nozzle');
@@ -594,6 +553,8 @@ public function handleReset()
                         ->update($data);
                     $updated += $db->affectedRows();
                 }
+
+                $this->_createLog($nozzle_id, 'meter_setup', $user_id, 'Setup initial meter: ' . $initial_meter);
             }
 
             $db->transComplete();
@@ -608,11 +569,82 @@ public function handleReset()
             }
         } catch (\Exception $e) {
             $db->transRollback();
-            log_message('error', 'Gagal save initial meters: '.$e->getMessage());
             return redirect()->back()
                 ->with('error', 'Gagal menyimpan: '.$e->getMessage())
                 ->withInput();
         }
+    }
+
+    private function _createLog($entityId, $action, $executedBy, $notes = '')
+    {
+        $logData = [
+            'entity_id' => $entityId,
+            'entity_type' => ($action === 'create' || $action === 'delete') ? 'penjualan' : 'reset_request',
+            'action' => $action,
+            'executed_by' => $executedBy,
+            'notes' => $notes,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+        $this->logModel->insert($logData);
+    }
+
+    private function _getLastMeter($kode_spbu, $nozzle_id) 
+    {
+        $lastSaleToday = $this->penjualanModel
+            ->where('nozzle_id', $nozzle_id)
+            ->where('kode_spbu', $kode_spbu)
+            ->where('DATE(tanggal)', date('Y-m-d'))
+            ->orderBy('shift', 'DESC')
+            ->first();
+    
+        if ($lastSaleToday) {
+            return (float)$lastSaleToday['meter_akhir'];
+        }
+    
+        $lastReset = $this->resetModel
+            ->where('nozzle_id', $nozzle_id)
+            ->where('kode_spbu', $kode_spbu)
+            ->where('status', 'approved')
+            ->orderBy('approved_at', 'DESC')
+            ->first();
+    
+        if ($lastReset) {
+            return (float)$lastReset['meter_awal_baru'];
+        }
+    
+        $nozzle = $this->nozzleModel->find($nozzle_id);
+        if (!$this->penjualanModel->where('nozzle_id', $nozzle_id)->countAllResults() && isset($nozzle['initial_meter'])) {
+            return (float)$nozzle['initial_meter'];
+        }
+    
+        $lastSale = $this->penjualanModel
+            ->where('nozzle_id', $nozzle_id)
+            ->where('kode_spbu', $kode_spbu)
+            ->orderBy('tanggal', 'DESC')
+            ->orderBy('shift', 'DESC')
+            ->first();
+    
+        return $lastSale ? (float)$lastSale['meter_akhir'] : 0;
+    }
+
+    private function _getLastMeters($kode_spbu)
+    {
+        $meters = [];
+        $nozzles = $this->nozzleModel->where('kode_spbu', $kode_spbu)->findAll();
+
+        foreach ($nozzles as $nozzle) {
+            $meters[$nozzle['id']] = $this->_getLastMeter($kode_spbu, $nozzle['id']);
+        }
+
+        return $meters;
+    }
+
+    private function _shouldShowResetButton($kode_spbu)
+    {
+        return $this->penjualanModel
+            ->where('kode_spbu', $kode_spbu)
+            ->countAllResults() > 0;
     }
 
     private function _needInitialSetup($kode_spbu)
@@ -629,23 +661,5 @@ public function handleReset()
         }
         
         return false;
-    }
-
-    public function resetRequests()
-    {
-        if (!hasAccessToSPBU(session()->get('kode_spbu'))) {
-            return redirect()->to('/unauthorized');
-        }
-
-        $data['requests'] = $this->resetModel
-            ->select('meter_reset_request.*, nozzle.kode_nozzle, produk_bbm.nama_produk, operator.nama_operator')
-            ->join('nozzle', 'nozzle.id = meter_reset_request.nozzle_id')
-            ->join('produk_bbm', 'produk_bbm.kode_produk = nozzle.kode_produk', 'left')
-            ->join('operator', 'operator.id = meter_reset_request.requested_by', 'left')
-            ->where('meter_reset_request.kode_spbu', session()->get('kode_spbu'))
-            ->orderBy('created_at', 'DESC')
-            ->findAll();
-
-        return view('penjualan/reset_requests', $data);
     }
 }

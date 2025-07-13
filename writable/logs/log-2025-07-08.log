@@ -1,0 +1,1429 @@
+DEBUG - 2025-07-08 15:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 15:55:29 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 15:55:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 15:55:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 15:55:29 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 15:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 15:57:05 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 15:57:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 15:57:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 15:57:05 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 15:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 15:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:00:05 --> mysqli_sql_exception: Unknown column 'shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Models\PenerimaanModel.php(160): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\app\Models\PenerimaanModel.php(141): App\Models\PenerimaanModel->getLastStok('1')
+#8 C:\xampp\htdocs\spbu-report\system\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert(Array)
+#9 C:\xampp\htdocs\spbu-report\system\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', Array)
+#10 C:\xampp\htdocs\spbu-report\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#11 C:\xampp\htdocs\spbu-report\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#12 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save(Array)
+#13 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#14 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#15 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#17 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#18 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#19 {main}
+CRITICAL - 2025-07-08 16:00:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'shift' in 'order clause'
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = :tangki_id:
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\PenerimaanModel.php(160): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Models\PenerimaanModel.php(141): App\Models\PenerimaanModel->getLastStok('1')
+ 6 SYSTEMPATH\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert([...])
+ 7 SYSTEMPATH\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 16:00:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = :tangki_id:
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\PenerimaanModel.php(160): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Models\PenerimaanModel.php(141): App\Models\PenerimaanModel->getLastStok('1')
+ 8 SYSTEMPATH\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert([...])
+ 9 SYSTEMPATH\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+10 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save([...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 16:00:05 --> [Caused by] mysqli_sql_exception: Unknown column 'shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = :tangki_id:
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\PenerimaanModel.php(160): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Models\PenerimaanModel.php(141): App\Models\PenerimaanModel->getLastStok('1')
+ 9 SYSTEMPATH\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert([...])
+10 SYSTEMPATH\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+11 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+12 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+13 APPPATH\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save([...])
+14 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+15 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+16 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+19 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:00:56 --> mysqli_sql_exception: Unknown column 'created_by' in 'field list' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\spbu-report\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\spbu-report\app\Models\PenerimaanModel.php(147): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\spbu-report\system\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert(Array)
+#9 C:\xampp\htdocs\spbu-report\system\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', Array)
+#10 C:\xampp\htdocs\spbu-report\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#11 C:\xampp\htdocs\spbu-report\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#12 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save(Array)
+#13 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#14 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#15 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#17 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#18 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#19 {main}
+CRITICAL - 2025-07-08 16:00:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_by' in 'field list'
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (:tanggal:, :kode_spbu:, :tangki_id:, :stok_awal:, :penerimaan:, :penjualan:, :stok_real:, :created_by:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PenerimaanModel.php(147): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert([...])
+ 7 SYSTEMPATH\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 16:00:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_by' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (\'2025-07-08\', \'7490123\', \'1\', 0, \'8000.00\', 0, 0, \'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (\'2025-07-08\', \'7490123\', \'1\', 0, \'8000.00\', 0, 0, \'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (:tanggal:, :kode_spbu:, :tangki_id:, :stok_awal:, :penerimaan:, :penjualan:, :stok_real:, :created_by:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PenerimaanModel.php(147): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert([...])
+ 9 SYSTEMPATH\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+10 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save([...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 16:00:56 --> [Caused by] mysqli_sql_exception: Unknown column 'created_by' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (\'2025-07-08\', \'7490123\', \'1\', 0, \'8000.00\', 0, 0, \'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (\'2025-07-08\', \'7490123\', \'1\', 0, \'8000.00\', 0, 0, \'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (\'2025-07-08\', \'7490123\', \'1\', 0, \'8000.00\', 0, 0, \'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stok_bbm` (`tanggal`, `kode_spbu`, `tangki_id`, `stok_awal`, `penerimaan`, `penjualan`, `stok_real`, `created_by`) VALUES (:tanggal:, :kode_spbu:, :tangki_id:, :stok_awal:, :penerimaan:, :penjualan:, :stok_real:, :created_by:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\PenerimaanModel.php(147): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\BaseModel.php(1697): App\Models\PenerimaanModel->updateStokAfterInsert([...])
+10 SYSTEMPATH\BaseModel.php(849): CodeIgniter\BaseModel->trigger('afterInsert', [...])
+11 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+12 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+13 APPPATH\Controllers\Penerimaan.php(104): CodeIgniter\BaseModel->save([...])
+14 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+15 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+16 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+19 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:02:20 --> mysqli_sql_exception: Unknown column 'shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(175): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(39): App\Controllers\Stok->_getLastStokPerTangki(7490123)
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->inputStokReal()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-08 16:02:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'shift' in 'order clause'
+[Method: GET, Route: stok/input]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = :tangki_id.1:
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Stok.php(175): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Stok.php(39): App\Controllers\Stok->_getLastStokPerTangki(7490123)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->inputStokReal()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 16:02:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = :tangki_id.1:
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Stok.php(175): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Stok.php(39): App\Controllers\Stok->_getLastStokPerTangki(7490123)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->inputStokReal()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 16:02:20 --> [Caused by] mysqli_sql_exception: Unknown column 'shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = \'1\'
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stok_bbm`
+WHERE `tangki_id` = :tangki_id.1:
+ORDER BY `tanggal` DESC, `shift` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Stok.php(175): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Stok.php(39): App\Controllers\Stok->_getLastStokPerTangki(7490123)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->inputStokReal()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:03:18 --> mysqli_sql_exception: Unknown column 'shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(97): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->simpanStokReal()
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-08 16:03:18 --> Error: Call to a member function getFirstRow() on bool
+[Method: POST, Route: stok/simpan]
+in SYSTEMPATH\Model.php on line 330.
+ 1 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Controllers\Stok.php(97): CodeIgniter\BaseModel->first()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->simpanStokReal()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:03:37 --> mysqli_sql_exception: Unknown column 'shift' in 'field list' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\spbu-report\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(113): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->simpanStokReal()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+DEBUG - 2025-07-08 16:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:04:05 --> mysqli_sql_exception: Unknown column 'shift' in 'where clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-08 16:04:05 --> Error: Call to a member function getFirstRow() on bool
+[Method: POST, Route: penjualan/store]
+in SYSTEMPATH\Model.php on line 330.
+ 1 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:04:27 --> mysqli_sql_exception: Unknown column 'shift' in 'where clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-08 16:04:27 --> Error: Call to a member function getFirstRow() on bool
+[Method: POST, Route: penjualan/store]
+in SYSTEMPATH\Model.php on line 330.
+ 1 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:05:28 --> mysqli_sql_exception: Unknown column 'shift' in 'where clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-08 16:05:28 --> Error: Call to a member function getFirstRow() on bool
+[Method: POST, Route: penjualan/store]
+in SYSTEMPATH\Model.php on line 330.
+ 1 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 16:06:24 --> mysqli_sql_exception: Unknown column 'shift' in 'where clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-08 16:06:24 --> Error: Call to a member function getFirstRow() on bool
+[Method: POST, Route: penjualan/store]
+in SYSTEMPATH\Model.php on line 330.
+ 1 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\StokModel.php(24): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Penjualan.php(198): App\Models\StokModel->updateStok('1', 2000.0, 'kurang')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 16:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 16:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 22:55:11 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 22:55:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 22:55:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 22:55:11 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 22:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 22:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 23:02:01 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 23:04:21 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:05:54 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 23:05:56 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 23:05:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:05:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:05:56 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:06:02 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan/create]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:06:03 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan/create]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:06:06 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 23:06:09 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 23:06:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:06:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:06:09 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 23:06:19 --> Error: Class "App\Models\PenerimaanModel" not found
+[Method: GET, Route: penerimaan]
+in APPPATH\Controllers\Penerimaan.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penerimaan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 23:09:41 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 23:09:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:09:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:09:41 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 23:15:04 --> mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bb...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bb...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bb...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bb...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\app\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', NULL)
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-08 23:15:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 2 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:15:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 4 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-08 23:15:04 --> [Caused by] mysqli_sql_exception: Unknown column 'stok_bbm.shift' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = 7490123
+AND `stok_bbm`.`tanggal` >= \'2025-07-01\'
+AND `stok_bbm`.`tanggal` <= \'2025-07-08\'
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `stok_bbm`.*, `tangki`.`kode_tangki`, `produk_bbm`.`nama_produk`
+FROM `stok_bbm`
+JOIN `tangki` ON `tangki`.`id` = `stok_bbm`.`tangki_id`
+JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `tangki`.`kode_produk`
+WHERE `stok_bbm`.`kode_spbu` = :stok_bbm.kode_spbu:
+AND `stok_bbm`.`tanggal` >= :stok_bbm.tanggal:
+AND `stok_bbm`.`tanggal` <= :stok_bbm.tanggal.1:
+ORDER BY `stok_bbm`.`tanggal` DESC, `stok_bbm`.`shift` DESC', [...], false)
+ 5 APPPATH\Models\StokModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Stok.php(143): App\Models\StokModel->getLaporan(7490123, '2025-07-01', '2025-07-08', null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-08 23:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 23:57:10 --> ERROR: The harga_beli field is required.
+DEBUG - 2025-07-08 23:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-08 23:59:37 --> ERROR: The harga_beli field is required.
+DEBUG - 2025-07-08 23:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 23:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

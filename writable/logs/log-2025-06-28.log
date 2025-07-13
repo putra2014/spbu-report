@@ -1,0 +1,199 @@
+DEBUG - 2025-06-28 18:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-28 18:38:25 --> mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(106): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->create()
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-06-28 18:38:25 --> Error in Penjualan/create: MySQL server has gone away
+DEBUG - 2025-06-28 18:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-28 18:38:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'spbu_db', 3306, '', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjual...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(58): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjual...', Array, false)
+#3 C:\xampp\htdocs\spbu-report\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\spbu-report\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\spbu-report\app\Controllers\Penjualan.php(58): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#7 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-06-28 18:38:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan_harian`.*, `nozzle`.`kode_nozzle`, `produk_bbm`.`nama_produk`, `operator`.`nama_operator`
+FROM `penjualan_harian`
+JOIN `nozzle` ON `nozzle`.`id` = `penjualan_harian`.`nozzle_id`
+LEFT JOIN `produk_bbm` ON `produk_bbm`.`kode_produk` = `nozzle`.`kode_produk`
+LEFT JOIN `operator` ON `operator`.`id` = `penjualan_harian`.`operator_id`
+WHERE `penjualan_harian`.`kode_spbu` = :penjualan_harian.kode_spbu:
+ORDER BY `tanggal` DESC, `shift` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Penjualan.php(58): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-28 18:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:38:48 --> Meter Debug: Array
+(
+    [nozzle_current] => 100.00
+    [last_sale_today] => 
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 4000.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kalibrasi
+            [approved_at] => 2025-06-27 18:34:31
+            [approved_by] => 1
+            [created_at] => 2025-06-27 18:33:42
+            [updated_at] => 2025-06-27 18:33:42
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+            [requested_at] => 2025-06-27 18:33:42
+            [is_permanent] => 0
+        )
+
+)
+
+DEBUG - 2025-06-28 18:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:01 --> Data yang diterima: Array
+(
+    [kode_spbu] => 7490123
+    [tanggal] => 2025-06-28
+    [shift] => 1
+    [dispenser_id] => 1
+    [nozzle_id] => 1
+    [meter_awal] => 100
+    [meter_akhir] => 200
+    [operator_id] => 1
+)
+
+DEBUG - 2025-06-28 18:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:05 --> Meter Debug: Array
+(
+    [nozzle_current] => 200.00
+    [last_sale_today] => Array
+        (
+            [id] => 4
+            [tanggal] => 2025-06-28 00:00:00
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [shift] => 1
+            [meter_awal] => 100.00
+            [meter_akhir] => 200.00
+            [volume] => 100.00
+            [harga_jual] => 10000.00
+            [total_penjualan] => 1000000.00
+            [operator_id] => 1
+            [approved_by] => 
+            [created_at] => 2025-06-28 18:39:01
+            [updated_at] => 2025-06-28 18:39:01
+            [alasan_reset] => 
+            [adjusted_by] => 
+            [adjusted_at] => 
+            [approved_at] => 
+            [approval_status] => approved
+            [is_adjusted] => 0
+            [is_reset] => 0
+        )
+
+    [last_reset] => Array
+        (
+            [id] => 2
+            [penjualan_id] => 
+            [kode_spbu] => 7490123
+            [nozzle_id] => 1
+            [meter_awal_lama] => 4000.00
+            [meter_awal_baru] => 100.00
+            [requested_by] => 4
+            [alasan] => kalibrasi
+            [approved_at] => 2025-06-27 18:34:31
+            [approved_by] => 1
+            [created_at] => 2025-06-27 18:33:42
+            [updated_at] => 2025-06-27 18:33:42
+            [status] => approved
+            [catatan] => 
+            [bukti_reset] => 
+            [reset_type] => physical
+            [requested_at] => 2025-06-27 18:33:42
+            [is_permanent] => 0
+        )
+
+)
+
+DEBUG - 2025-06-28 18:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:16 --> Data yang diterima: Array
+(
+    [kode_spbu] => 7490123
+    [tanggal] => 2025-06-28
+    [shift] => 2
+    [dispenser_id] => 1
+    [nozzle_id] => 1
+    [meter_awal] => 200
+    [meter_akhir] => 300
+    [operator_id] => 1
+)
+
+DEBUG - 2025-06-28 18:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 18:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -15,4 +15,12 @@ class DispenserModel extends Model
         'type_dispenser',
         'tgl_kalibrasi_berakhir'
     ];
+
+    public function withNozzles()
+    {
+        return $this->select('dispenser.*, nozzle.kode_nozzle, nozzle.current_meter')
+                   ->join('nozzle', 'nozzle.dispenser_id = dispenser.id', 'left')
+                   ->where('dispenser.kode_spbu', session()->get('kode_spbu'))
+                   ->findAll();
+    }
 }

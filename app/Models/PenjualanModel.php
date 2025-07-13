@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Config\Database;
 
 class PenjualanModel extends Model
 {
@@ -21,7 +22,8 @@ class PenjualanModel extends Model
         'total_penjualan',
         'operator_id',
         'approved_by',
-        'approval_status'
+        'approval_status',
+        'is_adjusted'
     ];
 
     public function getPenjualanHarian($kode_spbu)
@@ -109,7 +111,8 @@ class PenjualanModel extends Model
             ]);
             $sale = $this->find($penjualan_id);
 
-            $this->db->table('nozzle')
+            $db = Database::connect();
+            $db->table('nozzle')
                 ->where('id', $sale['nozzle_id'])
                 ->update(['current_meter' => $new_meter]);
         
@@ -132,4 +135,48 @@ class PenjualanModel extends Model
             throw $e;
         }
     }
+    public function withNozzleTests()
+    {
+        return $this->select('penjualan_harian.*')
+            ->select('(SELECT SUM(volume_test) FROM nozzle_tests WHERE nozzle_tests.penjualan_id = penjualan_harian.id) as total_volume_test')
+            ->select('(penjualan_harian.meter_akhir - penjualan_harian.meter_awal) - IFNULL((SELECT SUM(volume_test) FROM nozzle_tests WHERE nozzle_tests.penjualan_id = penjualan_harian.id), 0) as volume_bersih');
+    }
+// Tambahkan di method afterInsert()
+public function afterInsert(array $data)
+{
+    if (!isset($data['id'])) return $data;
+    
+    $penjualan = $this->find($data['id']);
+    $stokModel = new \App\Models\StokModel();
+    
+    // Pastikan ada record stok untuk hari ini
+    $stokHariIni = $stokModel->where('tangki_id', $penjualan['tangki_id'])
+                            ->where('tanggal', date('Y-m-d', strtotime($penjualan['tanggal'])))
+                            ->first();
+    
+    if (!$stokHariIni) {
+        $lastStok = $stokModel->where('tangki_id', $penjualan['tangki_id'])
+                            ->orderBy('tanggal', 'DESC')
+                            ->orderBy('shift', 'DESC')
+                            ->first();
+                            
+        $stokModel->insert([
+            'tanggal' => date('Y-m-d', strtotime($penjualan['tanggal'])),
+            'shift' => $penjualan['shift'],
+            'kode_spbu' => $penjualan['kode_spbu'],
+            'tangki_id' => $penjualan['tangki_id'],
+            'stok_awal' => $lastStok ? $lastStok['stok_real'] : 0,
+            'penerimaan' => 0,
+            'penjualan' => $penjualan['volume'],
+            'stok_real' => 0,
+            'created_by' => session()->get('user_id')
+        ]);
+    } else {
+        $stokModel->update($stokHariIni['id'], [
+            'penjualan' => $stokHariIni['penjualan'] + $penjualan['volume']
+        ]);
+    }
+    
+    return $data;
+}
 }

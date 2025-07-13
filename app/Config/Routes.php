@@ -124,6 +124,7 @@ $routes->post('nozzle/store', 'Nozzle::store');
 $routes->get('nozzle/edit/(:num)', 'Nozzle::edit/$1');
 $routes->post('nozzle/update/(:num)', 'Nozzle::update/$1');
 $routes->get('nozzle/delete/(:num)', 'Nozzle::delete/$1');
+$routes->get('api/nozzles', 'NozzleController::getByDispenser');
 
 // Tangki BBM
 $routes->get('tangki', 'Tangki::index');
@@ -139,6 +140,8 @@ $routes->post('penerimaan/store', 'Penerimaan::store');
 $routes->get('penerimaan/edit/(:num)', 'Penerimaan::edit/$1');
 $routes->post('penerimaan/update/(:num)', 'Penerimaan::update/$1');
 $routes->get('penerimaan/delete/(:num)', 'Penerimaan::delete/$1');
+$routes->get('penerimaan/dipping/(:num)', 'Penerimaan::dipping/$1');
+$routes->post('penerimaan/process-dipping/(:num)', 'Penerimaan::processDipping/$1');
 
 $routes->get('/penjualan', 'Penjualan::index');
 $routes->get('/penjualan/create', 'Penjualan::create');
@@ -160,8 +163,10 @@ $routes->post('penjualan/submit-reset', 'Penjualan::submitReset', ['filter' => '
 $routes->post('penjualan/handle-reset', 'Penjualan::handleReset');
 $routes->get('penjualan/reset-requests', 'Penjualan::resetRequests');
 $routes->post('penjualan/approve-reset/(:num)', 'Penjualan::approveReset/$1');
-
+$routes->get('penjualan/get-last-meter/(:num)', 'Penjualan::getLastMeter/$1');
 $routes->get('laporan/penjualan', 'Penjualan::resetRequests');
+$routes->get('penjualan/get-nozzles', 'Penjualan::getNozzles');
+
 
 $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->get('approvals', 'AdminApprovalController::index');
@@ -169,6 +174,17 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
     
     $routes->get('approve-reset/(:num)', 'AdminApprovalController::approveReset/$1');
     $routes->get('reject-reset/(:num)', 'AdminApprovalController::rejectReset/$1');
+});
+
+// Gunakan hanya filter 'auth' saja
+$routes->group('', ['filter' => 'auth'], function($routes) {
+    $routes->get('stok/input', 'Stok::inputStokReal');
+    $routes->post('stok/simpan', 'Stok::simpanStokReal');
+    $routes->get('stok/laporan', 'Stok::laporan');
+    $routes->get('stok/audit', 'StokAudit::index');
+    $routes->get('stok/audit/detail/(:num)', 'StokAudit::detail/$1');
+    $routes->get('stok/initial', 'Stok::initialStok');
+    $routes->post('stok/initial', 'Stok::initialStok');
 });
 
 
@@ -186,6 +202,18 @@ $routes->post('kode-nozzle/store', 'KodeNozzle::store');
 $routes->get('kode-nozzle/edit/(:num)', 'KodeNozzle::edit/$1');
 $routes->post('kode-nozzle/update/(:num)', 'KodeNozzle::update/$1');
 $routes->get('kode-nozzle/delete/(:num)', 'KodeNozzle::delete/$1');
+
+
+$routes->get('nozzle-test', 'NozzleTest::index');
+$routes->get('nozzle-test/create', 'NozzleTest::create');
+$routes->post('nozzle-test/store', 'NozzleTest::store');
+$routes->get('nozzle-test/edit/(:num)', 'NozzleTest::edit/$1');
+$routes->post('nozzle-test/update/(:num)', 'NozzleTest::update/$1');
+$routes->get('nozzle-test/delete/(:num)', 'NozzleTest::delete/$1');
+$routes->get('nozzle-test/get-nozzles', 'NozzleTest::getNozzles');
+$routes->get('nozzle-test/get-penjualan', 'NozzleTest::getPenjualan');
+
+
 
 $routes->get('operator', 'Operator::index');
 $routes->get('operator/create', 'Operator::create');
@@ -208,6 +236,9 @@ $routes->post('perusahaan/getKabupatenByProvinsi', 'Perusahaan::getKabupatenByPr
 $routes->get('unauthorized', 'ErrorController::unauthorized');
 
 
+
+// API untuk get data
+$routes->get('api/stok/last-stok/(:num)', 'Stok::getLastStok/$1'); // Get last stok by tangki_id
 
 
 

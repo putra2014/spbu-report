@@ -35,7 +35,15 @@
         <td><?= esc($p['volume_do']) ?></td>
         <td><?= esc($p['volume_diterima']) ?></td>
         <td><?= esc($p['selisih']) ?></td>
-        <td><?= esc($p['status']) ?></td>
+        <td>
+    <?php if ($p['status'] === 'pending_dipping'): ?>
+        <a href="/penerimaan/dipping/<?= $p['id'] ?>" class="btn btn-sm btn-warning">
+            <i class="fas fa-ruler"></i> Input Dipping
+        </a>
+    <?php else: ?>
+        <span class="badge badge-success">Selesai</span>
+    <?php endif; ?>
+</td>
         <td><?= number_format($p['harga_beli'], 0, ',', '.') ?></td>
         <td><?= esc($p['supir']) ?></td>
         <td>

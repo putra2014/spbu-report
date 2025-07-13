@@ -74,7 +74,8 @@ $kode_spbu = session()->get('kode_spbu');
               <ul class="nav nav-treeview">
                 <li class="nav-item"><a href="<?= base_url('tangki') ?>" class="nav-link">Data Tangki</a></li>
                 <li class="nav-item"><a href="<?= base_url('dispenser') ?>" class="nav-link">Data Dispenser</a></li>
-                <li class="nav-item"><a href="<?= base_url('nozzle') ?>" class="nav-link">Cek Nozzle</a></li>
+                <li class="nav-item"><a href="<?= base_url('nozzle') ?>" class="nav-link">Nozzle</a></li>
+                <li class="nav-item"><a href="<?= base_url('test-nozzle') ?>" class="nav-link">Test Nozzle</a></li>
               </ul>
             </li>
             <li class="nav-item highlight-red">
@@ -91,15 +92,9 @@ $kode_spbu = session()->get('kode_spbu');
               </ul>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/approvals') ?>">
-                    <i class="fas fa-sync-alt"></i> Reset Meter
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('penjualan/reset-requests') ?>">
                     <i class="fas fa-sync-alt"></i> Daftar Permintaan Reset
                 </a>
             </li>
-
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
@@ -129,7 +124,7 @@ $kode_spbu = session()->get('kode_spbu');
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item"><a href="<?= base_url('dashboard') ?>" class="nav-link">Stock</a></li>
+                <li class="nav-item"><a href="<?= base_url('stok/laporan') ?>" class="nav-link">Stock</a></li>
                 <li class="nav-item"><a href="<?= base_url('dashboard') ?>" class="nav-link">Received</a></li>
                 <li class="nav-item"><a href="<?= base_url('dashboard') ?>" class="nav-link">Sales</a></li>
                 <li class="nav-item"><a href="<?= base_url('dashboard') ?>" class="nav-link">Nozzle Cek</a></li>
@@ -159,7 +154,15 @@ $kode_spbu = session()->get('kode_spbu');
             <li class="nav-item"><a href="<?= base_url('tangki') ?>" class="nav-link">Data Tangki</a></li>
             <li class="nav-item"><a href="<?= base_url('dispenser') ?>" class="nav-link">Data Dispenser</a></li>
             <li class="nav-item"><a href="<?= base_url('penerimaan') ?>" class="nav-link">Penerimaan BBM</a></li>
-            <li class="nav-item"><a href="<?= base_url('nozzle') ?>" class="nav-link">Cek Nozzle</a></li>
+            <li class="nav-item"><a href="<?= base_url('nozzle') ?>" class="nav-link">Nozzle</a></li>
+            <li class="nav-item"><a href="<?= base_url('stok/laporan') ?>" class="nav-link">Stock</a></li>
+            <li class="nav-item"><a href="<?= base_url('stok/input') ?>" class="nav-link">Input Stok Akhir</a></li>
+            <li class="nav-item">
+                <a href="<?= base_url('nozzle-test') ?>" class="nav-link <?= current_url() == base_url('nozzle-test') ? 'active' : '' ?>">
+                    <i class="nav-icon fas fa-check-circle"></i>
+                    <p>Test Nozzle</p>
+                </a>
+            </li>
             <li class="nav-item"><a href="<?= base_url('penjualan') ?>" class="nav-link">Penjualan</a></li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('penjualan/setup-initial-meters') ?>">

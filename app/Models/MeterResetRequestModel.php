@@ -30,48 +30,25 @@ class MeterResetRequestModel extends Model
     protected $updatedField = 'updated_at';
 
     // Aturan validasi
-    protected $validationRules = [
-        'nozzle_id' => 'required|numeric',
-        'meter_awal_baru' => 'required|decimal',
-        'alasan' => 'required|min_length[5]',
-        'reset_type' => 'required|in_list[physical,correction]',
-        'bukti_reset' => 'max_size[bukti_reset,2048]|is_image[bukti_reset]',
-        'penjualan_id' => [
-            'rules' => 'required_if[reset_type,correction]|numeric',
-            'errors' => [
-                'required_if' => 'Pilih penjualan yang akan dikoreksi'
-            ]
+protected $validationRules = [
+    'nozzle_id' => 'required|numeric',
+    'meter_awal_baru' => 'required|decimal',
+    'alasan' => 'required|min_length[5]',
+    'reset_type' => 'required|in_list[physical,correction]',
+    'bukti_reset' => 'permit_empty|max_size[bukti_reset,2048]|is_image[bukti_reset]',
+    'penjualan_id' => [
+        'rules' => 'permit_empty|numeric',
+        'errors' => [
+            'numeric' => 'ID Penjualan harus angka'
         ]
-    ];
+    ]
+];
 
-    // Pesan validasi custom
-    protected $validationMessages = [
-        'meter_awal_baru' => [
-            'decimal' => 'Format meter harus angka desimal'
-        ]
-    ];
+// Hapus $validationMessages jika ada
 
-    // Validasi sebelum insert/update
-    protected $beforeInsert = ['validateReset'];
-    protected $beforeUpdate = ['validateReset'];
 
-    protected function validateReset(array $data)
-    {
-        if ($data['data']['reset_type'] === 'correction') {
-            $penjualanModel = new \App\Models\PenjualanModel();
-            $penjualan = $penjualanModel->find($data['data']['penjualan_id']);
-            
-            if ($data['data']['meter_awal_baru'] < $penjualan['meter_awal']) {
-                $this->validation->setError(
-                    'meter_awal_baru', 
-                    'Untuk koreksi data, meter baru ('.number_format($data['data']['meter_awal_baru'], 2).') 
-                    tidak boleh lebih kecil dari meter awal ('.number_format($penjualan['meter_awal'], 2).')'
-                );
-                return false;
-            }
-        }
-        return $data;
-    }
+
+
 
     public function getPendingRequests() {
         return $this->select('meter_reset_request.*, nozzle.kode_nozzle, produk_bbm.nama_produk, users.username as nama_admin_spbu')

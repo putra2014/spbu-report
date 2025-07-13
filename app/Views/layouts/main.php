@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title><?= $title ?? 'SPBU Report System' ?></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
   <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('adminlte/dist/css/adminlte.min.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('adminlte/css/custom.css') ?>">
+  
+  <!-- Load jQuery di HEAD -->
+  <script src="<?= base_url('adminlte/plugins/jquery/jquery.min.js') ?>"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
   <!-- Navbar -->
   <?= $this->include('layouts/navbar') ?>
 
-  <!-- Include Sidebar -->
+  <!-- Sidebar -->
   <?= $this->include('layouts/sidebar') ?>
 
   <!-- Content Wrapper -->
@@ -25,7 +27,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
       </div>
     <?php endif ?>
-<script src="<?= base_url('adminlte/plugins/jquery/jquery.min.js') ?>"></script>
+
     <?= $this->renderSection('content') ?>
   </div>
 <?= $this->include('layouts/footer') ?>
@@ -35,6 +37,7 @@
 
 <script src="<?= base_url('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 <script src="<?= base_url('adminlte/dist/js/adminlte.min.js') ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 <script>
   $('#provinsi').on('change', function () {
@@ -44,5 +47,6 @@
     });
   });
 </script>
+<?= $this->renderSection('scripts') ?>
 </body>
 </html>

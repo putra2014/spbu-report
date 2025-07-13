@@ -10,7 +10,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
-              <form action="<?= base_url('penerimaan/store') ?>" method="post">
+              <form action="<?= base_url('penerimaan/store') ?>" method="post">tabel
 
                     <?php if (session('role') != 'admin_spbu'): ?>
                       <div class="form-group">

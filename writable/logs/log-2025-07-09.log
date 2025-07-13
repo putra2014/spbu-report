@@ -1,0 +1,1292 @@
+DEBUG - 2025-07-09 00:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:00:02 --> ERROR: Melebihi kapasitas tangki! Maksimal: 2250
+DEBUG - 2025-07-09 00:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:02:12 --> mysqli_sql_exception: Unknown column 'created_by' in 'field list' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\spbu-report\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\spbu-report\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\spbu-report\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\spbu-report\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(98): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#9 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#10 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+DEBUG - 2025-07-09 00:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:06:47 --> mysqli_sql_exception: Unknown column 'created_by' in 'field list' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO pen...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pen...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pen...')
+#3 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO pen...')
+#4 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#5 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-07-09 00:06:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_by' in 'field list'
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:06:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_by' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 3 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:06:47 --> [Caused by] mysqli_sql_exception: Unknown column 'created_by' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 4 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 00:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:07:19 --> mysqli_sql_exception: Column count doesn't match value count at row 1 in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO pen...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pen...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pen...')
+#3 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO pen...')
+#4 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#5 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-07-09 00:07:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Column count doesn't match value count at row 1
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:07:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column count doesn't match value count at row 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 3 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:07:19 --> [Caused by] mysqli_sql_exception: Column count doesn't match value count at row 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 4 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 00:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:07:37 --> mysqli_sql_exception: Unknown column 'created_by' in 'field list' in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO pen...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pen...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pen...')
+#3 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO pen...')
+#4 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#5 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-07-09 00:07:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_by' in 'field list'
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:07:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_by' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 3 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:07:37 --> [Caused by] mysqli_sql_exception: Unknown column 'created_by' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 4 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        created_by
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\', 
+        4
+    )')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 00:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:08:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES (
+        '2025-07-09', 
+        '7490123', 
+        1, 
+       ...' at line 12 in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO pen...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pen...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pen...')
+#3 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO pen...')
+#4 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#5 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-07-09 00:08:27 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES (
+        '2025-07-09', 
+        '7490123', 
+        1, 
+       ...' at line 12
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:08:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES (
+        '2025-07-09', 
+        '7490123', 
+        1, 
+       ...' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 3 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:08:27 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES (
+        '2025-07-09', 
+        '7490123', 
+        1, 
+       ...' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 4 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan, 
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'11111\', 
+        8000, 
+        8000, 
+        8500, 
+        \'\', 
+        \'\'
+        
+    )')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 00:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 00:09:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+        '', 
+        ''
+        
+    )' at line 19 in C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\spbu-report\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO pen...', 0)
+#1 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pen...')
+#2 C:\xampp\htdocs\spbu-report\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pen...')
+#3 C:\xampp\htdocs\spbu-report\app\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO pen...')
+#4 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+#5 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+#6 C:\xampp\htdocs\spbu-report\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\spbu-report\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\spbu-report\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\spbu-report\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-07-09 00:09:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+        '', 
+        ''
+        
+    )' at line 19
+[Method: POST, Route: penerimaan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:09:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+        '', 
+        ''
+        
+    )' at line 19
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 3 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-09 00:09:18 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+        '', 
+        ''
+        
+    )' at line 19
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 4 APPPATH\Controllers\Penerimaan.php(94): CodeIgniter\Database\BaseConnection->query('INSERT INTO penerimaan (
+        tanggal, 
+        kode_spbu, 
+        tangki_id, 
+        nomor_do, 
+        volume_do, 
+        volume_diterima, 
+        harga_beli, 
+        supir, 
+        catatan
+        
+    ) VALUES (
+        \'2025-07-09\', 
+        \'7490123\', 
+        1, 
+        \'111111\', 
+        8000, 
+        8000, 
+        , 
+        \'\', 
+        \'\'
+        
+    )')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penerimaan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penerimaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 00:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 00:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-09 13:40:12 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TangkiModel::getTangkiBySPBU
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Stok.php(168): CodeIgniter\Model->__call('getTangkiBySPBU', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 13:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-09 13:40:50 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TangkiModel::getTangkiBySPBU
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Stok.php(168): CodeIgniter\Model->__call('getTangkiBySPBU', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 13:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-09 13:40:53 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TangkiModel::getTangkiBySPBU
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Stok.php(168): CodeIgniter\Model->__call('getTangkiBySPBU', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 13:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-09 13:42:34 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TangkiModel::getTangkiBySPBU
+[Method: GET, Route: stok/laporan]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Stok.php(168): CodeIgniter\Model->__call('getTangkiBySPBU', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Stok->laporan()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stok))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-09 13:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
